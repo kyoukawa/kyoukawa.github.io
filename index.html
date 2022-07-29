@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="OI," />
 
 
 
@@ -79,15 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://kyoukawa.github.io/about/index.html">
+<meta name="description" content="字典树(Trie)引出问题 如果你经常上网冲浪,在搜索时会发现有一个建议功能.那么这是怎么实现的呢?  前置知识首先我们要了解什么是字符串的前缀 前缀假设有一个字符串“ABC”我们称“A”,”AB”.”ABC”为它的前缀. 所以为了好研究,我们把问题简化成给定一个字符串,找出数据中所有以这个串为前缀的字符串. 算法设计假设数据中有n个字符串,最长为m,有k种字符 暴力一个判断前缀有什么难的,我直接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20220728">
+<meta property="og:url" content="https://kyoukawa.github.io/2022/07/29/20220728/index.html">
 <meta property="og:site_name" content="姜川的博客">
+<meta property="og:description" content="字典树(Trie)引出问题 如果你经常上网冲浪,在搜索时会发现有一个建议功能.那么这是怎么实现的呢?  前置知识首先我们要了解什么是字符串的前缀 前缀假设有一个字符串“ABC”我们称“A”,”AB”.”ABC”为它的前缀. 所以为了好研究,我们把问题简化成给定一个字符串,找出数据中所有以这个串为前缀的字符串. 算法设计假设数据中有n个字符串,最长为m,有k种字符 暴力一个判断前缀有什么难的,我直接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-23T03:27:41.000Z">
-<meta property="article:modified_time" content="2022-07-23T03:27:41.880Z">
+<meta property="og:image" content="https://kyoukawa.github.io/pic/20220728/DuckDuckGo.png">
+<meta property="og:image" content="https://kyoukawa.github.io/pic/20220728/%E5%BB%BA%E6%A0%91.png">
+<meta property="article:published_time" content="2022-07-28T22:37:39.000Z">
+<meta property="article:modified_time" content="2022-07-29T00:17:30.769Z">
 <meta property="article:author" content="kyoukawa">
+<meta property="article:tag" content="OI">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kyoukawa.github.io/pic/20220728/DuckDuckGo.png">
 
 
 
@@ -119,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://kyoukawa.github.io/about/"/>
+  <link rel="canonical" href="https://kyoukawa.github.io/2022/07/29/20220728/"/>
 
 
 
@@ -318,6 +324,10 @@
 <h4 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h4><p>单次查询的复杂度则降低到了<strong>O(m)</strong><br>比暴力少了不少:)</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n,m,tot=<span class="number">1</span>; <span class="comment">//n个字符串,m次查询,tot表示当前节点数量</span></span><br><span class="line"><span class="type">int</span> tr[maxn][<span class="number">26</span>]; <span class="comment">//tr[i][j]表示第i个节点添加第j种字符后到达哪个节点,第二维即k</span></span><br><span class="line"><span class="type">int</span> ed[maxn]; <span class="comment">//ed[i]表示以i号节点表示的字符串在数据中的数量</span></span><br></pre></td></tr></table></figure>
 <h5 id="建树-1"><a href="#建树-1" class="headerlink" title="建树"></a>建树</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Insert</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>; <span class="comment">//上次到达节点的下标</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">	<span class="comment">//循环每个字符</span></span><br><span class="line">        <span class="keyword">if</span> (tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="comment">//如果这个节点不存在</span></span><br><span class="line">            tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]=++tot; <span class="comment">//创建新节点,节点数量+1</span></span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]; <span class="comment">//保存当前下标</span></span><br><span class="line">    &#125;</span><br><span class="line">    ed[cur]++; <span class="comment">//插入结束</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="查询-1"><a href="#查询-1" class="headerlink" title="查询"></a>查询</h5><p>例如计算一个串在数据中所有的前缀的数量</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>,cnt=<span class="number">0</span>; <span class="comment">//cnt用来记录数量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ed[cur])&#123;</span><br><span class="line">        	cnt+=ed[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ed[cur]) cnt+=ed[cur];</span><br><span class="line">    <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以发现大体上与建树的代码一致</p>
+<p>快去试一试<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8306">luogu模版题</a></p>
 
           
         
