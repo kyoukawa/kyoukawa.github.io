@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -49,22 +49,22 @@
 <link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/pic/icon.png?v=6.0.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/pic/icon.png?v=6.0.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/pic/icon.png?v=6.0.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+  <link rel="mask-icon" href="/pic/icon.png?v=6.0.0" color="#222">
 
 
 
 
 
-  <meta name="keywords" content="OI," />
+  <meta name="keywords" content="Kyoukawa's blog" />
 
 
 
@@ -79,21 +79,15 @@
 
 
 
-<meta name="description" content="字典树(Trie)引出问题 如果你经常上网冲浪,在搜索时会发现有一个建议功能.那么这是怎么实现的呢?  前置知识首先我们要了解什么是字符串的前缀 前缀假设有一个字符串“ABC”我们称“A”,”AB”.”ABC”为它的前缀. 所以为了好研究,我们把问题简化成给定一个字符串,找出数据中所有以这个串为前缀的字符串. 算法设计假设数据中有n个字符串,最长为m,有k种字符 暴力一个判断前缀有什么难的,我直接">
-<meta property="og:type" content="article">
-<meta property="og:title" content="20220728">
-<meta property="og:url" content="https://kyoukawa.github.io/2022/07/29/20220728/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="https://kyoukawa.github.io/about/index.html">
 <meta property="og:site_name" content="姜川的博客">
-<meta property="og:description" content="字典树(Trie)引出问题 如果你经常上网冲浪,在搜索时会发现有一个建议功能.那么这是怎么实现的呢?  前置知识首先我们要了解什么是字符串的前缀 前缀假设有一个字符串“ABC”我们称“A”,”AB”.”ABC”为它的前缀. 所以为了好研究,我们把问题简化成给定一个字符串,找出数据中所有以这个串为前缀的字符串. 算法设计假设数据中有n个字符串,最长为m,有k种字符 暴力一个判断前缀有什么难的,我直接">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://kyoukawa.github.io/pic/20220728/DuckDuckGo.png">
-<meta property="og:image" content="https://kyoukawa.github.io/pic/20220728/%E5%BB%BA%E6%A0%91.png">
-<meta property="article:published_time" content="2022-07-28T22:37:39.000Z">
-<meta property="article:modified_time" content="2022-07-29T00:17:30.769Z">
+<meta property="article:published_time" content="2022-07-23T03:27:41.000Z">
+<meta property="article:modified_time" content="2022-07-23T03:27:41.880Z">
 <meta property="article:author" content="kyoukawa">
-<meta property="article:tag" content="OI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kyoukawa.github.io/pic/20220728/DuckDuckGo.png">
 
 
 
@@ -101,9 +95,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -125,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="https://kyoukawa.github.io/2022/07/29/20220728/"/>
+  <link rel="canonical" href="https://kyoukawa.github.io/about/"/>
 
 
 
@@ -187,7 +181,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -197,11 +191,31 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
           </a>
         </li>
       
@@ -465,7 +479,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
                   <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
@@ -479,10 +493,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
@@ -529,6 +543,11 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -560,7 +579,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.0.0</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.0.0</div>
 
 
 
@@ -577,11 +596,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
