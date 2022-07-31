@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyoukawa.github.io/2022/07/31/vimrc/</loc>
+    
+    <lastmod>2022-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kyoukawa.github.io/2022/07/27/%E7%A8%8B%E5%BA%8F%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC/</loc>
     
     <lastmod>2022-07-31</lastmod>
