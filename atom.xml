@@ -6,7 +6,7 @@
   <link href="https://kyoukawa.github.io/atom.xml" rel="self"/>
   
   <link href="https://kyoukawa.github.io/"/>
-  <updated>2022-07-31T23:50:05.422Z</updated>
+  <updated>2022-08-01T02:48:31.479Z</updated>
   <id>https://kyoukawa.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20220801物理笔记</title>
+    <link href="https://kyoukawa.github.io/2022/08/01/20220801%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/"/>
+    <id>https://kyoukawa.github.io/2022/08/01/20220801%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-08-01T00:04:59.000Z</published>
+    <updated>2022-08-01T02:48:31.479Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数学知识"><a href="#数学知识" class="headerlink" title="数学知识"></a>数学知识</h1><p>函数, 几何, 微积分, 线性代数</p><h1 id="质点"><a href="#质点" class="headerlink" title="质点"></a>质点</h1><p>在某种情况下,确实可以忽略物体的<strong>大小</strong>和<strong>形状</strong>,把它简化为<strong>一个有质量的点</strong></p><p>从问题出发,判断是否可以简化为质点</p><h1 id="参考系"><a href="#参考系" class="headerlink" title="参考系"></a>参考系</h1><h2 id="运动的绝对性"><a href="#运动的绝对性" class="headerlink" title="运动的绝对性"></a>运动的绝对性</h2><p>一切物体都在绝对运动之中,绝对静止的物体是不存在的</p><h2 id="运动的相对性"><a href="#运动的相对性" class="headerlink" title="运动的相对性"></a>运动的相对性</h2><p>要描述物体的运动,总是相对其他物体而言的.</p><h2 id="参考系的定义"><a href="#参考系的定义" class="headerlink" title="参考系的定义"></a>参考系的定义</h2><p>用来作为物体运动的参考的物体叫作参考系</p><p><strong>参考系可以任意选取</strong></p><p>在运动中不动的就是参考系</p><h2 id="惯性参考系与非惯性参考系"><a href="#惯性参考系与非惯性参考系" class="headerlink" title="惯性参考系与非惯性参考系"></a>惯性参考系与非惯性参考系</h2><p>如果参考系本身在做匀速直线运动或静止, 那么它就是惯性参考系</p><p>否则就是非惯性参考系</p><h1 id="时刻与时间间隔"><a href="#时刻与时间间隔" class="headerlink" title="时刻与时间间隔"></a>时刻与时间间隔</h1><h2 id="时刻"><a href="#时刻" class="headerlink" title="时刻"></a>时刻</h2><p>无限短的一瞬间</p><p>对应状态</p><h2 id="时间间隔"><a href="#时间间隔" class="headerlink" title="时间间隔"></a>时间间隔</h2><p>两个时刻之间的部分</p><p>对应过程</p><h1 id="位置和坐标"><a href="#位置和坐标" class="headerlink" title="位置和坐标"></a>位置和坐标</h1><p>掌握平面直角坐标系和三维立体坐标系</p><h1 id="路程与位移"><a href="#路程与位移" class="headerlink" title="路程与位移"></a>路程与位移</h1><table><thead><tr><th align="center"></th><th align="center">路程</th><th align="center">位移</th></tr></thead><tbody><tr><td align="center">定义</td><td align="center">轨迹的长度</td><td align="center">起点指向终点的有向线段</td></tr><tr><td align="center">字母</td><td align="center">s</td><td align="center">x</td></tr><tr><td align="center">单位</td><td align="center">m</td><td align="center">m</td></tr><tr><td align="center">过程&#x2F;状态</td><td align="center">过程</td><td align="center">过程</td></tr><tr><td align="center">是否有方向</td><td align="center">无</td><td align="center">有</td></tr></tbody></table><h1 id="速度"><a href="#速度" class="headerlink" title="速度"></a>速度</h1><p>默认瞬时速度</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;数学知识&quot;&gt;&lt;a href=&quot;#数学知识&quot; class=&quot;headerlink&quot; title=&quot;数学知识&quot;&gt;&lt;/a&gt;数学知识&lt;/h1&gt;&lt;p&gt;函数, 几何, 微积分, 线性代数&lt;/p&gt;
+&lt;h1 id=&quot;质点&quot;&gt;&lt;a href=&quot;#质点&quot; class=&quot;headerl</summary>
+      
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kyoukawa.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>vimrc</title>

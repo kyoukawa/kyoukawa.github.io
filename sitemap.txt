@@ -1,3 +1,4 @@
+https://kyoukawa.github.io/2022/08/01/20220801%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/
 https://kyoukawa.github.io/2022/07/31/vimrc/
 https://kyoukawa.github.io/2022/07/29/20220728/
 https://kyoukawa.github.io/2022/07/27/%E7%A8%8B%E5%BA%8F%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC/
@@ -12,3 +13,4 @@ https://kyoukawa.github.io/tags/OI/
 https://kyoukawa.github.io/tags/%E6%95%B0%E5%AD%A6/
 https://kyoukawa.github.io/tags/%E7%94%9F%E7%89%A9/
 https://kyoukawa.github.io/tags/%E7%A7%91%E6%8A%80-%E7%BD%91%E7%BB%9C/
+https://kyoukawa.github.io/tags/%E7%AC%94%E8%AE%B0/

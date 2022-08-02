@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyoukawa.github.io/2022/08/01/20220801%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2022-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kyoukawa.github.io/2022/07/31/vimrc/</loc>
     
     <lastmod>2022-07-31</lastmod>
@@ -85,7 +94,7 @@
 
   <url>
     <loc>https://kyoukawa.github.io/</loc>
-    <lastmod>2022-07-31</lastmod>
+    <lastmod>2022-08-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,28 +102,35 @@
   
   <url>
     <loc>https://kyoukawa.github.io/tags/OI/</loc>
-    <lastmod>2022-07-31</lastmod>
+    <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kyoukawa.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2022-07-31</lastmod>
+    <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kyoukawa.github.io/tags/%E7%94%9F%E7%89%A9/</loc>
-    <lastmod>2022-07-31</lastmod>
+    <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://kyoukawa.github.io/tags/%E7%A7%91%E6%8A%80-%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2022-07-31</lastmod>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyoukawa.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
