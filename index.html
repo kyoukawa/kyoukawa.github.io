@@ -160,6 +160,109 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/fake-tapechat%E9%A1%B9%E7%9B%AE%E7%9A%84docker%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/icon.png">
+      <meta itemprop="name" content="kyoukawa">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="姜川的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/fake-tapechat%E9%A1%B9%E7%9B%AE%E7%9A%84docker%E5%8C%96/" class="post-title-link" itemprop="url">fake-tapechat项目的docker化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-01-02 20:11:00 / Modified: 20:56:03" itemprop="dateCreated datePublished" datetime="2023-01-02T20:11:00+08:00">2023-01-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="项目介绍">项目介绍</h1>
+<p><del>高估了自己,项目效果与tapechat完全是天壤之别</del>
+主要是没有美工(</p>
+<p>这个项目是2022年暑假和cyh一起搞的(主要是我</p>
+<p>主要利用python中flask库和json库实现了如下功能:</p>
+<ol type="1">
+<li>用户注册</li>
+<li>用户向他人提问箱提问</li>
+<li>登录后查看自己提问箱</li>
+<li>删库跑路的admin模式:)</li>
+</ol>
+<p><a
+target="_blank" rel="noopener" href="https://github.com/kyoukawa/fake-tapechat">原项目地址</a></p>
+<p><del>垃圾得很,知道的bug就一堆</del></p>
+<h1 id="翻新原因">翻新原因</h1>
+<p>新项目要用到http进行交互,不如直接拿flask现成代码:)</p>
+<h1 id="操作">操作</h1>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/78432719">参考资料</a></p>
+<h2 id="注意事项">注意事项</h2>
+<ol type="1">
+<li>请确保有好用的梯子,并设置了终端代理</li>
+<li>请提前安装docker</li>
+<li>端口不知为何不能设置为80,于是我改成了81</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.run(host=<span class="string">&quot;0.0.0.0&quot;</span>,port=<span class="number">81</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="添加文件">添加文件</h2>
+<p>文件名与标题应当完全一致,否则可能会出奇怪的bug</p>
+<h3 id="dockerfile">Dockerfile</h3>
+<p><code>Dockerfile</code></p>
+<p>注意没有后缀名!</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FROM python</span><br><span class="line">WORKDIR /website/fake-tapechat</span><br><span class="line"></span><br><span class="line">COPY requirements.txt ./</span><br><span class="line">RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"></span><br><span class="line">COPY . .</span><br><span class="line"></span><br><span class="line">CMD [&quot;gunicorn&quot;, &quot;main:app&quot;, &quot;-c&quot;, &quot;./gunicorn.conf.py&quot;]</span><br></pre></td></tr></table></figure>
+<h3 id="requirements.txt">requirements.txt</h3>
+<p>用来告诉docker
+python需要安装的仓库(前面两个不能删,是用来后台运行的)</p>
+<p><code>requirements.txt</code></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gunicorn</span><br><span class="line">gevent</span><br><span class="line">flask</span><br></pre></td></tr></table></figure>
+<h3 id="gunicorn.conf.py">gunicorn.conf.py</h3>
+<p><code>gunicorn.conf.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">workers = <span class="number">5</span></span><br><span class="line">worker_class = <span class="string">&quot;gevent&quot;</span></span><br><span class="line"><span class="comment"># 多线程</span></span><br><span class="line">bind = <span class="string">&quot;0.0.0.0:80&quot;</span></span><br><span class="line"><span class="comment"># gunicorn端口设置</span></span><br></pre></td></tr></table></figure>
+<h2 id="创建docker镜像">创建docker镜像</h2>
+<p>在终端运行脚本,flask可以改为任意名字(注意后面有个点)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker build -t <span class="string">&#x27;flask&#x27;</span> .</span><br></pre></td></tr></table></figure>
+<h2 id="运行docker">运行docker</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d -p 81:81 --name fake-tapechat flask</span><br></pre></td></tr></table></figure>
+<p>打开浏览器访问 http://127.0.0.1:81 即可</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/%E5%85%AB%E4%B8%8A%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E6%88%BF%E9%97%B4%E5%B8%83%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -311,9 +414,15 @@ id="ipad视角新ipad非常厉害的自拍超广角">iPad视角(新iPad非常厉
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
