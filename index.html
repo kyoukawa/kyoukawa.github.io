@@ -183,10 +183,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-01-02 20:11:00 / Modified: 20:56:03" itemprop="dateCreated datePublished" datetime="2023-01-02T20:11:00+08:00">2023-01-02</time>
+              <time title="Created: 2023-01-02 20:11:00" itemprop="dateCreated datePublished" datetime="2023-01-02T20:11:00+08:00">2023-01-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-04 17:31:03" itemprop="dateModified" datetime="2023-01-04T17:31:03+08:00">2023-01-04</time>
+              </span>
 
           
 
@@ -240,9 +246,10 @@ python需要安装的仓库(前面两个不能删,是用来后台运行的)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">workers = <span class="number">5</span></span><br><span class="line">worker_class = <span class="string">&quot;gevent&quot;</span></span><br><span class="line"><span class="comment"># 多线程</span></span><br><span class="line">bind = <span class="string">&quot;0.0.0.0:80&quot;</span></span><br><span class="line"><span class="comment"># gunicorn端口设置</span></span><br></pre></td></tr></table></figure>
 <h2 id="创建docker镜像">创建docker镜像</h2>
 <p>在终端运行脚本,flask可以改为任意名字(注意后面有个点)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker build -t <span class="string">&#x27;flask&#x27;</span> .</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker build -t <span class="string">&#x27;ftc&#x27;</span> .</span><br></pre></td></tr></table></figure>
 <h2 id="运行docker">运行docker</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d -p 81:81 --name fake-tapechat flask</span><br></pre></td></tr></table></figure>
+<p>博客修改:docker配置文件夹映射</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d -p 81:81 --name ftc --privileged=<span class="literal">true</span> -v ~/Documents/GitHub/fake-tapechat:/fake-tapechat ftc</span><br></pre></td></tr></table></figure>
 <p>打开浏览器访问 http://127.0.0.1:81 即可</p>
 
       
