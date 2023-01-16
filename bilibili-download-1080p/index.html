@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"kyoukawa.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://kyoukawa.github.io/categories/index.html">
+  <meta name="description" content="由于b站sb的操作,现在不加配置的话,利用各种下载器都只能下载480p的视频:( 今天在v2ex看到了解决方案  首先安装yt-dlp(早就有) 在浏览器登录b站(用来搞到cookie) 然后在下载时加上 --cookies-from-browser chrome(自行更改浏览器名称)  示例 就拿经典名作igotsmoke举例子吧 1yt-dlp --cookies-from-browser c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bilibili-download-1080p">
+<meta property="og:url" content="http://kyoukawa.github.io/bilibili-download-1080p/index.html">
 <meta property="og:site_name" content="姜川的博客">
+<meta property="og:description" content="由于b站sb的操作,现在不加配置的话,利用各种下载器都只能下载480p的视频:( 今天在v2ex看到了解决方案  首先安装yt-dlp(早就有) 在浏览器登录b站(用来搞到cookie) 然后在下载时加上 --cookies-from-browser chrome(自行更改浏览器名称)  示例 就拿经典名作igotsmoke举例子吧 1yt-dlp --cookies-from-browser c">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-12-30T11:01:17.000Z">
-<meta property="article:modified_time" content="2022-12-30T11:03:09.234Z">
+<meta property="article:published_time" content="2023-01-16T13:38:51.000Z">
+<meta property="article:modified_time" content="2023-01-16T13:45:04.059Z">
 <meta property="article:author" content="kyoukawa">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://kyoukawa.github.io/categories/">
+<link rel="canonical" href="http://kyoukawa.github.io/bilibili-download-1080p/">
 
 
 <script id="page-configurations">
@@ -38,13 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>categories | 姜川的博客
-</title>
+  <title>bilibili-download-1080p | 姜川的博客</title>
   
 
 
@@ -156,51 +157,89 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="en">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/bilibili-download-1080p/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/icon.png">
+      <meta itemprop="name" content="kyoukawa">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="姜川的博客">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          bilibili-download-1080p
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">categories
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
 
-<div class="post-meta">
+              <time title="Created: 2023-01-16 21:38:51 / Modified: 21:45:04" itemprop="dateCreated datePublished" datetime="2023-01-16T21:38:51+08:00">2023-01-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>由于b站sb的操作,现在不加配置的话,利用各种下载器都只能下载480p的视频:(</p>
+<p>今天在v2ex看到了解决方案</p>
+<ul>
+<li>首先安装yt-dlp(早就有)</li>
+<li>在浏览器登录b站(用来搞到cookie)</li>
+<li>然后在下载时加上
+<code>--cookies-from-browser chrome</code>(自行更改浏览器名称)</li>
+</ul>
+<h1 id="示例">示例</h1>
+<p>就拿经典名作igotsmoke举例子吧 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yt-dlp --cookies-from-browser chrome https://www.bilibili.com/video/BV1v44y1o7Qs/</span><br></pre></td></tr></table></figure></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/fake-tapechat%E9%A1%B9%E7%9B%AE%E7%9A%84docker%E5%8C%96/" rel="prev" title="fake-tapechat项目的docker化">
+      <i class="fa fa-chevron-left"></i> fake-tapechat项目的docker化
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              No categories
-            </div>
-            <div class="category-all">
-              
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -251,6 +290,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">示例</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
