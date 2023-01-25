@@ -162,6 +162,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/Treap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/icon.png">
+      <meta itemprop="name" content="kyoukawa">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="姜川的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog-pre/Treap/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="merge">merge</h2>
+<h3 id="要求">要求</h3>
+<p><span
+class="math display">\[ul&lt;u&lt;ur&lt;vl&lt;v&lt;vr\]</span></p>
+<h3 id="递归">递归</h3>
+<p>选择pri小的当根(假设upri小)</p>
+<p><span class="math display">\[ul\larr u\to merge(ur,v)\]</span></p>
+<h3 id="出口">出口</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">u == <span class="number">0</span> || v == <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="应用">应用</h3>
+<p>删除 d = merge(dl,dr)(d引用)</p>
+<h2 id="split">split</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">pair <span class="title">Split</span><span class="params">(node c, <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// RETURN (u,v) u&lt;x&lt;v</span></span><br><span class="line">    <span class="keyword">if</span> (x == c.key)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (x &lt; c.key)</span><br><span class="line">    &#123;</span><br><span class="line">        node v, u;</span><br><span class="line">        u = clu;</span><br><span class="line">        v = c;</span><br><span class="line">        <span class="comment">// v.rc = c.rc</span></span><br><span class="line">        pair cl = <span class="built_in">split</span>(c.lc, x);</span><br><span class="line">        v.lc = cl.first;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">make_pair</span>(u, v);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="插入">插入</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">split</span>(root, x);</span><br><span class="line"></span><br><span class="line">root = <span class="built_in">merge</span>(<span class="built_in">merge</span>(u, x), v);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/GTD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -903,91 +991,6 @@ class="math inline">\(h\)</span>的斜抛运动曲线表达式
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20220912%E9%AB%98%E8%81%94%E4%B8%80%E8%AF%95%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20220912%E9%AB%98%E8%81%94%E4%B8%80%E8%AF%95%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">20220912高联一试笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-09-12 00:00:00" itemprop="dateCreated datePublished" datetime="2022-09-12T00:00:00+08:00">2022-09-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <span id="more"></span>
-<p>知识点太多,只记新学的</p>
-<h2 id="知识点">知识点</h2>
-<h3 id="分配率">分配率</h3>
-<p><span class="math display">\[A\cap (B\cup C)=(A\cap B)\cup (A\cap
-C)\]</span> <span class="math display">\[A\cup (B\cap C)=(A\cup B)\cap
-(A\cup C)\]</span></p>
-<h3 id="反演律">反演律</h3>
-<p><span class="math display">\[\complement_U{(A \cap B)}=\complement_UA
-\cup \complement_UB\]</span> <span
-class="math display">\[\complement_U{(A \cup B)}=\complement_UA \cap
-\complement_UB\]</span></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1059,7 +1062,7 @@ class="math display">\[\complement_U{(A \cup B)}=\complement_UA \cap
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
