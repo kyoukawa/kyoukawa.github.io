@@ -1,1576 +1,496 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png">
-  <link rel="mask-icon" href="/images/icon.png" color="#222">
+<html lang="en" color-mode="light">
 
-<link rel="stylesheet" href="/css/main.css">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="kyoukawa" />
+  <meta name="description" content="" />
+  
+    <meta name="robots" content="noindex" />
+  
+  
+  <title>
+    
+     姜川的博客
+  </title>
 
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"kyoukawa.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="姜川的博客">
-<meta property="og:url" content="http://kyoukawa.github.io/page/2/index.html">
-<meta property="og:site_name" content="姜川的博客">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="kyoukawa">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://kyoukawa.github.io/page/2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>姜川的博客</title>
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
   
 
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
 
 
+  
 
+  
 
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Oranges</a></div>
   </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">Friends</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
 
-  <div class="site-meta">
 
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">姜川的博客</h1>
-      <span class="logo-line-after"><i></i></span>
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <div class="container index">
+  <div class="post-list">
+    <!-- 遍历渲染文章 -->
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20220907-wuli/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20220907-df/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20220907%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20220908-ch/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20220908-df/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20220908-wuli/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20221010%E7%94%9F%E7%89%A9%E7%AB%9E%E8%B5%9B%E8%AF%BE/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20221013%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20221013%E8%AF%AD%E6%96%87%E7%AC%94%E8%AE%B0/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="">
+        <div class="time-m-d">2022-10-16</div>
+        <div class="title">
+          <a href="/20221014%E7%89%A9%E7%90%86/">
+            
+              <span>untitled</span>
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
+  <nav class="post-navigation">
+    
+      <a href="/"><i class="iconfont icon-angleleft"></i></a>
+    
+    <span class="page-num">2 / 6</span>
+    
+      <a href="/page/3/"><i class="iconfont icon-angleright"></i></a>
+    
+  </nav>
+</div>
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2023 Oranges</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
     </a>
   </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20220907-math/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20220907-math/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="反函数">反函数</h1>
-<p>今天数学课没学太明白,有错请为我指出 ## 映射 <span
-class="math display">\[A \to B\]</span> ### 单射 对于不同的<span
-class="math inline">\(x\in A\)</span>,<span
-class="math inline">\(x\)</span>对应的<span
-class="math inline">\(y\)</span>不同</p>
-<p>我的理解:整个函数图像不存在两个点纵坐标相等</p>
-<h3 id="满射">满射</h3>
-<p>对于<span class="math inline">\(\forall y\in B\)</span>,都有<span
-class="math inline">\(x\)</span>与之对应</p>
-<p>我的理解:<span class="math inline">\(f(x)\)</span>的值域恰好为<span
-class="math inline">\(B\)</span>(装满</p>
-<h3 id="双射">双射</h3>
-<p>既是单射,也是满射</p>
-<p>也就是一一对应</p>
-<h3 id="zyh提出的小结论">zyh提出的小结论</h3>
-<p>有<span class="math inline">\(A \to B\)</span>且<span
-class="math inline">\(|A|=|B|\)</span></p>
-<p>若为单射<span class="math inline">\(\to\)</span>双射</p>
-<p>若为满射<span class="math inline">\(\to\)</span>双射</p>
-<p><strong>只有满足一一对应关系的函数才有反函数</strong></p>
-<h2 id="反函数的定义">反函数的定义</h2>
-<p>在函数<span
-class="math inline">\(y=f(x)\)</span>中,值域内任意一个<span
-class="math inline">\(y\)</span>,都只有唯一的<span
-class="math inline">\(x\)</span>与之对应(一一对应),那么<span
-class="math inline">\(x\)</span>是<span
-class="math inline">\(y\)</span>的函数</p>
-<p>该函数为<span
-class="math inline">\(y=f(x)\)</span>的反函数,表示为<span
-class="math inline">\(y=f^{-1}(x)\)</span></p>
-<h2 id="求反函数">求反函数</h2>
-<p><del>我在课上算的奇慢无比</del></p>
-<ol type="1">
-<li>对调<span class="math inline">\(x\)</span>和<span
-class="math inline">\(y\)</span>,得到<span
-class="math inline">\(x=f(y)\)</span></li>
-<li>整理式子,变为<span class="math inline">\(y=f^{-1}(x)\)</span></li>
-<li>定义域(性质2</li>
-</ol>
-<h2 id="性质">性质</h2>
-<ol type="1">
-<li><span
-class="math inline">\(f(f^{-1}(x))=f^{-1}(f(x))=x\)</span>,由反函数定义易得</li>
-<li>反函数的定义域是原函数的值域,反之亦然</li>
-<li><span class="math inline">\(f(x)\)</span>与<span
-class="math inline">\(f^{-1}(x)\)</span>图像关于<span
-class="math inline">\(y=x\)</span>对称</li>
-</ol>
-<h2 id="单调性">单调性</h2>
-<ol type="1">
-<li>若<span
-class="math inline">\(y=f(x)\)</span>为单调函数,必有反函数(单调函数都是一一对应</li>
-<li><span class="math inline">\(y=f^{-1}(x)\)</span>单调性与<span
-class="math inline">\(y=f(x)\)</span>一致</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20220907-wuli/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20220907-wuli/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="物理笔记">20220907物理笔记</h1>
-<h2 id="长度的单位换算">长度的单位换算</h2>
-<h3 id="换算关系">换算关系</h3>
-<p><span class="math inline">\(1km = 10^3m = 10^6 mm = 10^9\mu m =
-10^{12}nm\)</span> 相邻两级差<span
-class="math inline">\(10^3\)</span></p>
-<p><span
-class="math inline">\(1m=10dm=10^2cm=10^3mm\)</span>相邻两级差10</p>
-<h3 id="练习题">练习题</h3>
-<p><span class="math inline">\(7.5\times10^3\mu m=7.5\times 10^3\times
-10^{-6}m=7.5\times 10^{-3}m\)</span></p>
-<p><strong>请务必掌握科学计数法的表示和运算</strong></p>
-<h2 id="长度的测量">长度的测量</h2>
-<p>工具:<strong>刻度尺</strong></p>
-<h3 id="三要素">三要素</h3>
-<ol type="1">
-<li>量程(范围,必须是从几到几)</li>
-<li>0刻度线</li>
-<li>分度值(最小的单位)</li>
-</ol>
-<h3 id="操作">操作</h3>
-<ol type="1">
-<li><p>看三要素,选取合适的测量工具</p></li>
-<li><p>刻度贴被测物体,平行放置</p></li>
-<li><p>从竖直上方看</p></li>
-<li><p>估读,估到分度值下一位(不太离谱就能给分</p></li>
-<li><p>记录,准确值加一位的估读(一定要写单位</p>
-<p>测量结果正好到分度值这位也要加上0(公平公正</p>
-<p>#### 我下课问的问题 一把刻度尺分度值为<span
-class="math inline">\(1mm\)</span>,测量的准确值为<span
-class="math inline">\(26cm\)</span></p>
-<p>则测量结果应记录为<span class="math inline">\(26.00cm\)</span></p>
-<p>十分位的<span
-class="math inline">\(0\)</span>是准确值部分的(分度值为<span
-class="math inline">\(1mm\)</span></p>
-<p>百分位的<span
-class="math inline">\(0\)</span>是估读(在分度值后一位</p></li>
-</ol>
-<h3 id="一些机智的测量方法">一些机智的测量方法</h3>
-<h4 id="生活中的长度高度">生活中的长度/高度</h4>
-<p>地球半径约<span class="math inline">\(6400km\)</span></p>
-<p>珠峰高<span class="math inline">\(8844m\)</span></p>
-<p>一层楼<span class="math inline">\(3m\)</span></p>
-<p>一块瓷砖<span class="math inline">\(60cm或80cm\)</span></p>
-<p>鞋长<span class="math inline">\(30cm\)</span></p>
-<p>头发丝直径<span class="math inline">\(0.07mm\)</span></p>
-<p>PM2.5的大小约<span class="math inline">\(2.5\mu m\)</span></p>
-<p><strong>考试中请学会利用以上或生活中熟知的一些长度,作为比较的标尺</strong></p>
-<h4 id="累积法">累积法</h4>
-<p>利用积少成多的思想,测量极其微小的长度</p>
-<h5 id="测量纸的厚度">测量纸的厚度</h5>
-<ol type="1">
-<li>测量一本书的厚度<span class="math inline">\(L\)</span></li>
-<li>统计这本书共有<span class="math inline">\(n\)</span>页</li>
-<li>每张纸的厚度即为</li>
-</ol>
-<p><span class="math display">\[L_0=\frac{L}{n}\]</span></p>
-<h2 id="时间">时间</h2>
-<p>国际单位:<strong>秒(s)</strong></p>
-<p>其它常用单位:分钟(min),小时(h)</p>
-<h3 id="时间的换算">时间的换算</h3>
-<p><span class="math inline">\(1h=60min=3600s\)</span></p>
-<h3 id="计时工具">计时工具</h3>
-<p>传统:日晷,滴漏,沙漏</p>
-<p>实验室:<strong>停表</strong></p>
-<h4 id="三要素-1">三要素</h4>
-<ol type="1">
-<li>量程 <span class="math inline">\(0-15min\)</span></li>
-<li>分度值 <span class="math inline">\(0.1s\)</span></li>
-</ol>
-<p>大圈每圈30s 内圈一格一分钟(颜色标注是前半分钟还是后半分钟</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20220907%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20220907%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <head>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true
-        },
-        "HTML-CSS": { availableFonts: ["TeX"] }
-    });
-    </script>
-</head>
-<h1 id="反函数">反函数</h1>
-<p>今天数学课没学太明白,有错请为我指出
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog-pre/20220907%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
         
-      
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20220908-ch/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20220908-ch/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="语文笔记">20220908语文笔记</h1>
-<h2 id="三行对译">三行对译</h2>
-<blockquote>
-<p>自三峡七百里中,两岸连山,略无阙( <span
-class="math inline">\(qu\=e\)</span> )处。</p>
-</blockquote>
-<p>在七百多里长的三峡中,两岸的山连绵不绝,没有一点空缺。</p>
-<blockquote>
-<p>重岩叠嶂,隐天蔽日,自非亭午夜分,不见曦月。</p>
-</blockquote>
-<p>两岸的石块堆积成的山和连成屏障一样的山,遮住了天空和太阳,只有到了正午才能看到太阳,到了午夜才能看到月亮。</p>
-<blockquote>
-<p>至于夏水襄( <span class="math inline">\(xi \=a ng\)</span>
-)陵,沿溯阻绝,或王命急宣,有时朝发白帝,暮到江陵,</p>
-</blockquote>
-<p>到了夏天,水满上山陵,水路被阻绝,有时(倘若)皇帝紧急下发命令,有时早上从白帝城出发,晚上到江陵。</p>
-<blockquote>
-<p>其间千二百里,虽乘奔御风,不以疾也。</p>
-</blockquote>
-<p>这之间一千二百里的距离,骑着飞奔的马,顺风顺水也没有这么快。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20220908-df/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20220908-df/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="政治笔记">20220908政治笔记</h1>
-<h2 id="作业讲评">作业讲评</h2>
-<p>意义:对个人,对社会,对国家(从小到大)</p>
-<p>对法律,对道德(多种角度)</p>
-<p><strong>亲社会行为的意义</strong>:个人6条(知识点)+材料</p>
-<p>社会实践<span class="math inline">\(\to\)</span>亲社会行为</p>
-<p>辨析题:观点+知识+材料+怎么做</p>
-<h1 id="网络生活新空间">网络生活新空间</h1>
-<h2 id="丰富日常生活">丰富日常生活</h2>
-<ol type="1">
-<li>方便快捷</li>
-<li>打破时空</li>
-</ol>
-<p>个人角度</p>
-<h2 id="推动社会进步国家">推动社会进步(国家)</h2>
-<ol type="1">
-<li>经济</li>
-<li>社会</li>
-</ol>
-<p>(人才,资金,技术,物资) <span class="math inline">\(\to\)</span>
-传统行业转型升级</p>
-<p>网络<span class="math inline">\(\to\)</span>实现民主,改进政策<span
-class="math inline">\(\to\)</span>人民对社会的支持</p>
-<p>保障了公民的知情权,参与权,表达权,监督权<span
-class="math inline">\(\to\)</span>使得政府的决策更加民主,科学化避免官僚主义<span
-class="math inline">\(\to\)</span>主人翁意识</p>
-<h2 id="文化">文化</h2>
-<p>科技推动文化创新,网络推动文化传播(传统+科技)</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20220908-wuli/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20220908-wuli/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="物理笔记">20220908物理笔记</h1>
-<h2 id="课内笔记">课内笔记</h2>
-<p>各位同学使用了停表</p>
-<p>注意千万不要扔到地上(</p>
-<h3 id="停表的使用">停表的使用</h3>
-<p>昨天写了一些,今天只写操作</p>
-<ol type="1">
-<li>按一下按钮开始计时</li>
-<li>再按一下结束计时</li>
-<li>第三下归零</li>
-</ol>
-<p>在测量时出现了大家结果不同的情况</p>
-<p>这就是误差(应该没有人实验错误</p>
-<h3 id="误差与错误">误差与错误</h3>
-<h4 id="误差">误差</h4>
-<p>定义:测量值与真实值之间的差异</p>
-<p>来源: 1. 估读不准确 2. 仪器不准确 3.
-环境对实验造成的影响(温度,湿度等</p>
-<p><strong>误差不可避免,只能尽量减小</strong></p>
-<p>减小误差的方法: 1. 多次实验取平均值,避免偶然性 2.
-换用更精密的测量工具 3. 换其他的测量方法(累积法</p>
-<h4 id="错误">错误</h4>
-<p>可能的原因: 1. 不遵守仪器的使用规则 2. 记录粗心</p>
-<p><strong>不应发生,可以避免</strong></p>
-<h3 id="运动的描述">运动的描述</h3>
-<p>重点: 1. 什么是机械运动 2. 什么是参照物(怎么选 3.
-运动和静止的相对性</p>
-<h4 id="机械运动">机械运动</h4>
-<p>定义:位置随时间变化</p>
-<h4 id="参照物">参照物</h4>
-<p>定义:判断物体运动或静止的标准(假定参照物静止</p>
-<p>选取参照物的要点 1. 随便选 2.
-<strong>参照物不能是研究对象本身</strong> 3.
-题目中不说则默认为大地(请联系上下文分析</p>
-<h4 id="判断物体运动与否">判断物体运动与否</h4>
-<ol type="1">
-<li>确定研究对象</li>
-<li>选取合适的参照物</li>
-<li>判断研究对象与参照物是否发生相对位移</li>
-</ol>
-<p>物体运动与否,由参照物决定</p>
-<p><strong>运动具有绝对性,静止具有相对性</strong></p>
-<h2 id="p1-实验课">P1 实验课</h2>
-<h3 id="使用打点计时器">使用打点计时器</h3>
-<p>不同类型的打点计时器</p>
-<table>
-<thead>
-<tr class="header">
-<th>电磁</th>
-<th>电火花</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>低压</td>
-<td>高压</td>
-</tr>
-<tr class="even">
-<td>交流电</td>
-<td>交流电</td>
-</tr>
-<tr class="odd">
-<td>对纸阻力大</td>
-<td>対纸阻力较小</td>
-</tr>
-</tbody>
-</table>
-<p>优先选取电火花打点计时器</p>
-<h4 id="频率与相邻计时点的时间间隔">频率与相邻计时点的时间间隔</h4>
-<blockquote>
-<p>我国家用交流电为<span class="math inline">\(220v,50Hz\)</span></p>
-</blockquote>
-<p><span class="math inline">\(1Hz=1s^{-1}\)</span></p>
-<p>所以一秒有<span
-class="math inline">\(50\)</span>个点,每个时间间隔为<span
-class="math inline">\(0.02s\)</span></p>
-<p>打在纸上的点:计时点</p>
-<p>选取的点:计数点(隔1个或4个</p>
-<h3 id="测量">测量</h3>
-<p><strong>测大值,误差更小</strong></p>
-<p>和今天课内物理课测乒乓球,时间太短测不准是一个道理</p>
-<p>所以只测每个点到第一个点的距离(避免误差的叠加</p>
-<h4 id="瞬时速度">瞬时速度</h4>
-<p>平均速度,时间间隔越小越接近瞬时速度(一般情况下</p>
-<p>所以, <span
-class="math display">\[V_A=\frac{\overline{OB}}{T_{AB}}\]</span></p>
-<h4 id="加速度">加速度</h4>
-<ol type="1">
-<li>顺差法 <span class="math inline">\(\Delta
-x=aT^2\)</span>,x为相同相邻时间内位移差(挨着的两段的差</li>
-<li>画图(拟合 画<span class="math inline">\(v-t\)</span>
-<ol type="1">
-<li>描点</li>
-<li>画图</li>
-<li>选两点算出加速度(不取描的点,选的两点尽量远</li>
-</ol></li>
-</ol>
-<h3 id="废话">废话</h3>
-<p>今天和颜申一起做实验真不错:)</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20221010%E7%94%9F%E7%89%A9%E7%AB%9E%E8%B5%9B%E8%AF%BE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20221010%E7%94%9F%E7%89%A9%E7%AB%9E%E8%B5%9B%E8%AF%BE/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <head>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true
-        },
-        "HTML-CSS": { availableFonts: ["TeX"] }
-    });
-    </script>
-</head>
-<h1 id="受精">受精</h1>
-<ol type="1">
-<li>受精卵是生命的起点</li>
-<li>由精子和卵细胞结合而成</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20221013%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20221013%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <head>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        tex2jax: {
-            inlineMath: [['$','$']],
-            displayMath: [['$$','$$']],
-            processEscapes: true
-        },
-        "HTML-CSS": { availableFonts: ["TeX"] }
-    });
-    </script>
-</head>
-<h1 id="课内物理笔记">20221013课内物理笔记</h1>
-<h2
-id="探究熔化过程中温度随时间变化规律">探究熔化过程中,温度随时间变化规律</h2>
-<p>猜想:熔化过程中,温度随时间上升。</p>
-<h3 id="实验设计">实验设计</h3>
-<ol type="1">
-<li>器材:温度计,停表(考试最重要的是测量器材)</li>
-<li>装置:略
-<ul>
-<li>自下而上组装</li>
-<li>水浴法加热</li>
-</ul></li>
-</ol>
-<h3 id="海波">海波</h3>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(t_时/min\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(t_温/^{o}
-C\)</span></th>
-<th style="text-align: center;">物态</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">固态</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">固态</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2~13</td>
-<td style="text-align: center;">48</td>
-<td style="text-align: center;">固液共存态</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">液态</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">52</td>
-<td style="text-align: center;">液态</td>
-</tr>
-</tbody>
-</table>
-<figure>
-<img src="海波.png" alt="图像" />
-<figcaption aria-hidden="true">图像</figcaption>
-</figure>
-<p>海波的熔点为<span class="math inline">\(48^{o} C\)</span></p>
-<h2 id="晶体与非晶体">晶体与非晶体</h2>
-<p>像海波一样有熔点的是晶体
-eg:<ruby>萘<rp>(</rp><rt>nài</rt><rp>)</rp></ruby>,食盐,金属</p>
-<p>像石蜡一样没有熔点的是非晶体 eg:巧克力(可恶又被馋到了</p>
-<h3 id="熔化条件">熔化条件</h3>
-<ul>
-<li>达到熔点</li>
-<li>继续吸热</li>
-</ul>
-<h2 id="自认为的难点">自认为的难点</h2>
-<ul>
-<li>错字
-<ul>
-<li><strong>熔化</strong></li>
-</ul></li>
-<li>晶体在达到熔点的一瞬间还是固体,最后一个瞬间是液体(老早以前被坑过</li>
-<li>晶体熔化过程中吸热,温度不变</li>
-</ul>
-<p>总结:还是挺简单的(</p>
-<h1 id="物理竞赛课">物理竞赛课</h1>
-<h2 id="水流星过山车">水流星,过山车</h2>
-<ul>
-<li>单轨(绳) <span class="math inline">\(v_{min} =
-\sqrt{gR}\)</span></li>
-<li>双轨(杆) <span class="math inline">\(v_{min} = 0\)</span></li>
-</ul>
-<h2 id="离心运动与近心运动">离心运动与近心运动</h2>
-<ul>
-<li>离心运动 <span class="math inline">\(F_合 &lt; F_向\)</span></li>
-<li>近心运动 <span class="math inline">\(F_合 &gt; F_向\)</span></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20221013%E8%AF%AD%E6%96%87%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20221013%E8%AF%AD%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="藤野先生">《藤野先生》</h1>
-<h2 id="文章结构">文章结构</h2>
-<h3 id="在东京1-3">在东京(1-3)</h3>
-<ul>
-<li>所见:赏樱花</li>
-<li>所闻:学跳舞</li>
-<li>所感:讽刺,不屑,不与之为伍</li>
-<li>其他留学生:不务正业 <span class="math inline">\(\to\)</span>
-失望(东京也无非是这样)</li>
-</ul>
-<h3 id="在仙台4-35">在仙台(4-35)</h3>
-<h4 id="印象深刻的两个名目4">印象深刻的两个名目(4)</h4>
-<ul>
-<li><p>日暮里 思乡,忧国</p></li>
-<li><p>水户 爱国 #### 被优待(5)</p></li>
-<li><p>国家落后 <span class="math inline">\(\to\)</span> 自卑 <span
-class="math inline">\(\to\)</span> 对他人过度揣测</p></li>
-<li><p>自尊心受伤 #### 相识(6-10)</p></li>
-<li><p>不拘小节</p></li>
-<li><p>有学问 #### 相处(11-23)</p></li>
-<li><p>帮我改解剖图 治学严谨</p></li>
-<li><p>对我关心(中国人敬重鬼) 关爱学生,没有民族偏见</p></li>
-<li><p>了解裹脚 求知求实</p></li>
-</ul>
-<h4 id="一些事件24-31">一些事件(24-31)</h4>
-<h5 id="匿名信">匿名信</h5>
-<ul>
-<li>自尊心</li>
-</ul>
-<h5 id="看电影">看电影</h5>
-<ul>
-<li>受震撼</li>
-<li>弃医从文</li>
-<li>爱国</li>
-</ul>
-<h4 id="惜别32-35">惜别(32-35)</h4>
-<ul>
-<li>依依惜别</li>
-</ul>
-<h3 id="离开仙台36-38">离开仙台(36-38)</h3>
-<ul>
-<li>收藏,找讲义</li>
-<li>挂照片</li>
-<li>写文章</li>
-<li>怀念感激</li>
-</ul>
-<h2 id="总结">总结</h2>
-<h3 id="评价">评价</h3>
-<ul>
-<li>在彷徨时给我提供帮助</li>
-<li>最感激,给我鼓励</li>
-<li>伟大的</li>
-<li>怀念感激</li>
-</ul>
-<h3 id="线索">线索</h3>
-<ul>
-<li>与藤野先生交往</li>
-<li>爱国之心</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/blog-pre/20221014%E7%89%A9%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog-pre/20221014%E7%89%A9%E7%90%86/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-10-16 16:20:16" itemprop="dateCreated datePublished" datetime="2022-10-16T16:20:16+08:00">2022-10-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <head>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true
-        },
-        "HTML-CSS": { availableFonts: ["TeX"] }
-    });
-    </script>
-</head>
-<h1 id="物理笔记">20221014物理笔记</h1>
-<h2 id="吸放热">吸放热</h2>
-<p>条件:存在温差 - 高温: 放热 - 低温: 吸热</p>
-<p><ruby>炽<rp>(</rp><rt>chì</rt><rp>)</rp></ruby></p>
-<h2 id="凝固">凝固</h2>
-<h3 id="温度时间曲线">温度时间曲线</h3>
-<p>和融化的相反</p>
-<h3 id="凝固点">凝固点</h3>
-<p>凝固点 = 熔点(非晶体没有凝固点)</p>
-<h3 id="回答问题">回答问题</h3>
-<ul>
-<li>有依据</li>
-<li>有分析</li>
-<li>有结论</li>
-</ul>
-<p>(笔记越来越水了</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
   </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+  
+<script src="/js/colorscheme.js"></script>
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="kyoukawa"
-      src="/images/icon.png">
-  <p class="site-author-name" itemprop="name">kyoukawa</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+
+
         
-          <span class="site-state-item-count">53</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">21</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
+  
+  
+<script src="/js/shares.js"></script>
 
 
 
       </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">kyoukawa</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-</body>
+  </body>
 </html>
