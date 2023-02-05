@@ -27,24 +27,11 @@
 <meta property="og:site_name" content="姜川的博客">
 <meta property="og:description" content="导函数的计算及其应用">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://math.now.sh/?from=%28C%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28x%5Ea%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28%5Cln%20x%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28e%5Ex%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28a%5Ex%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28%5Csin%20x%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28%5Ccos%20x%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28u%5Cpm%20v%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28u%5Ccdot%20v%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28u%5Ccdot%20v%5Ccdot%20w%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28kx%29%5E%7B">
-<meta property="og:image" content="https://math.now.sh/?from=%28%5Cfrac%7Bu%7D%7Bv%7D%29%5E%7B">
 <meta property="article:published_time" content="2022-09-21T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-01-19T10:27:36.867Z">
 <meta property="article:author" content="kyoukawa">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://math.now.sh/?from=%28C%29%5E%7B">
 
 <link rel="canonical" href="http://kyoukawa.github.io/20220922%E6%B1%82%E5%AF%BC/">
 
@@ -236,9 +223,24 @@
       
         <h2 id="导函数的计算及其应用">导函数的计算及其应用</h2>
 <span id="more"></span>
-<h1>基本的求导公式</h1>
-<p style=""><img src="https://math.now.sh?from=%28C%29%5E%7B'%7D%3D0(%E5%B8%B8%E6%95%B0%E5%AF%BC%E6%95%B0%E4%B8%BA0)%0A" /></p><p style=""><img src="https://math.now.sh?from=%28x%5Ea%29%5E%7B'%7D%3D%5Calpha%20x%5E%7B%5Calpha%20-1%7D%0A" /></p><p style=""><img src="https://math.now.sh?from=%28%5Cln%20x%29%5E%7B'%7D%3D%5Cfrac%7B1%7D%7Bx%7D%0A" /></p><p style=""><img src="https://math.now.sh?from=%28e%5Ex%29%5E%7B'%7D%3De%5Ex%0A" /></p><p style=""><img src="https://math.now.sh?from=%28a%5Ex%29%5E%7B'%7D%3Da%5Ex%20%5Cln%20a%0A" /></p><p style=""><img src="https://math.now.sh?from=%28%5Csin%20x%29%5E%7B'%7D%3D%5Ccos%20x%0A" /></p><p style=""><img src="https://math.now.sh?from=%28%5Ccos%20x%29%5E%7B'%7D%3D-%5Csin%20x%0A" /></p><h1>运算</h1>
-<p style=""><img src="https://math.now.sh?from=%28u%5Cpm%20v%29%5E%7B'%7D%3Du%5E%7B'%7D%5Cpm%20v%5E%7B'%7D%0A" /></p><p style=""><img src="https://math.now.sh?from=%28u%5Ccdot%20v%29%5E%7B'%7D%3Du%5E%7B'%7D%5Ccdot%20v%2Bu%5Ccdot%20v%5E%7B'%7D%20%0A" /></p><p style=""><img src="https://math.now.sh?from=%28u%5Ccdot%20v%5Ccdot%20w%29%5E%7B'%7D%3Du%5E%7B'%7D%5Ccdot%20v%5Ccdot%20w%2Bu%5Ccdot%20v%5E%7B'%7D%5Ccdot%20w%2Bu%5Ccdot%20v%5Ccdot%20w%5E%7B'%7D%20%0A" /></p><p style=""><img src="https://math.now.sh?from=%28kx%29%5E%7B'%7D%3Dk%5Ccdot%20x%5E%7B'%7D(k%E4%B8%BA%E5%B8%B8%E6%95%B0)%0A" /></p><p style=""><img src="https://math.now.sh?from=%28%5Cfrac%7Bu%7D%7Bv%7D%29%5E%7B'%7D%3D%5Cfrac%7Bu%5E%7B'%7Dv-uv%5E%7B'%7D%7D%7Bv%5E2%7D%0A" /></p>
+<h1 id="基本的求导公式">基本的求导公式</h1>
+<p><span class="math display">\[(C)^{&#39;}=0(常数导数为0)\]</span>
+<span class="math display">\[(x^a)^{&#39;}=\alpha x^{\alpha -1}\]</span>
+<span class="math display">\[(\ln x)^{&#39;}=\frac{1}{x}\]</span> <span
+class="math display">\[(e^x)^{&#39;}=e^x\]</span> <span
+class="math display">\[(a^x)^{&#39;}=a^x \ln a\]</span> <span
+class="math display">\[(\sin x)^{&#39;}=\cos x\]</span> <span
+class="math display">\[(\cos x)^{&#39;}=-\sin x\]</span></p>
+<h1 id="运算">运算</h1>
+<p><span class="math display">\[(u\pm v)^{&#39;}=u^{&#39;}\pm
+v^{&#39;}\]</span> <span class="math display">\[(u\cdot
+v)^{&#39;}=u^{&#39;}\cdot v+u\cdot v^{&#39;} \]</span> <span
+class="math display">\[(u\cdot v\cdot w)^{&#39;}=u^{&#39;}\cdot v\cdot
+w+u\cdot v^{&#39;}\cdot w+u\cdot v\cdot w^{&#39;} \]</span> <span
+class="math display">\[(kx)^{&#39;}=k\cdot x^{&#39;}(k为常数)\]</span>
+<span
+class="math display">\[(\frac{u}{v})^{&#39;}=\frac{u^{&#39;}v-uv^{&#39;}}{v^2}\]</span></p>
+
     </div>
 
     
@@ -321,7 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">导函数的计算及其应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">基本的求导公式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">运算</span></a></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">导函数的计算及其应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F"><span class="nav-number"></span> <span class="nav-text">基本的求导公式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E7%AE%97"><span class="nav-number"></span> <span class="nav-text">运算</span></a></div>
       </div>
       <!--/noindex-->
 

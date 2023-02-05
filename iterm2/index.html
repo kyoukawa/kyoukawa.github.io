@@ -227,63 +227,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1>前言</h1>
-<p>适度折腾,不要太花里胡哨影响学习(<s>亲身经历</s></p>
-<span id="more"></span>
-<h1>iterm2有什么用</h1>
-<blockquote>
-<p><s>除了好看没用</s></p>
-</blockquote>
+        <h1 id="前言">前言</h1>
+<p>适度折腾,不要太花里胡哨影响学习(<del>亲身经历</del> <span id="more"></span> #
+iterm2有什么用 &gt; <del>除了好看没用</del></p>
 <p>但是好看的重要性仅次于性能(明示某个用js写的垃圾term,但是贼好看</p>
 <p>没错就是<strong>Hyper</strong></p>
 <p>当然用别的也不错,只要颜色配对了都挺好看</p>
-<h1>安装</h1>
-<p><a target="_blank" rel="noopener" href="https://iterm2.com/">iterm2</a><br>
-<s>自己去官网装</s></p>
-<h1><strong>配置</strong></h1>
+<h1 id="安装">安装</h1>
+<p><a target="_blank" rel="noopener" href="https://iterm2.com/">iterm2</a> <del>自己去官网装</del></p>
+<h1 id="配置"><strong>配置</strong></h1>
 <h2 id="zsh">zsh</h2>
 <blockquote>
 <p>火速把bash换成zsh</p>
 </blockquote>
 <p>macOS默认zsh</p>
-<p>ubuntu默认没有zsh,<s>难道有人用ubuntu还不会装软件吗?</s></p>
+<p>ubuntu默认没有zsh,<del>难道有人用ubuntu还不会装软件吗?</del></p>
 <p>别的系统自己上网查(</p>
 <h2 id="oh-my-zsh">oh-my-zsh</h2>
-<p>据说oh-my-fish性能更好,但是没啥区别,而且oh-my-zsh用的人更多<br>
-<a target="_blank" rel="noopener" href="https://ohmyz.sh/">oh-my-zsh</a></p>
+<p>据说oh-my-fish性能更好,但是没啥区别,而且oh-my-zsh用的人更多 <a
+target="_blank" rel="noopener" href="https://ohmyz.sh/">oh-my-zsh</a></p>
 <h2 id="zshrc">zshrc</h2>
 <p>文件在<code>~/.zshrc</code></p>
 <p>语法和bashrc差不多</p>
 <h3 id="alias-快捷指令">alias 快捷指令</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> v=<span class="string">&quot;vim&quot;</span> <span class="comment">#用v启动vim</span></span><br></pre></td></tr></table></figure>
-<h3 id="THEME">THEME</h3>
-<p>找到类似这样的一行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;spaceship&quot;</span></span><br></pre></td></tr></table></figure>
-<p>引号里面就是主题名,自己去随便找个主题就行</p>
+<h3 id="theme">THEME</h3>
+<p>找到类似这样的一行 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;spaceship&quot;</span></span><br></pre></td></tr></table></figure>
+引号里面就是主题名,自己去随便找个主题就行</p>
 <p>如果你用类似p10k之类unicode字符的主题,请注意终端的字体</p>
-<h1>效果</h1>
-<p><img src="/pic/term/term.png" alt=""></p>
-<h1>tmux</h1>
-<p>最近发现了一个有趣的东西,tmux<br>
-<img src="/pic/term/tmux.png" alt=""></p>
+<h1 id="效果">效果</h1>
+<p><img src="/pic/term/term.png" /></p>
+<h1 id="tmux">tmux</h1>
+<p>最近发现了一个有趣的东西,tmux <img src="/pic/term/tmux.png" /></p>
 <p>效果:同时多个窗口</p>
-<p><s>窗口截图出了点bug,懒得裁切了</s></p>
-<h2 id="安装">安装</h2>
+<p><del>窗口截图出了点bug,懒得裁切了</del></p>
+<h2 id="安装-1">安装</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install tmux </span><br></pre></td></tr></table></figure>
 <p>报错就去找自己对应系统的方案(我这次甚至都写了具体的命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s homo <span class="comment"># homo替换成想要的窗口名</span></span><br></pre></td></tr></table></figure>
-<p>然后就得到了这样的东西<br>
-<img src="/pic/term/tmux1.png" alt=""></p>
+<p>然后就得到了这样的东西 <img src="/pic/term/tmux1.png" /></p>
 <p>在tmux中任何操作的快捷键前都要按一下&lt;CR-B&gt;</p>
 <pre><code>mac中CR是⌃
 
-linux中CR是ctrl
-</code></pre>
+linux中CR是ctrl</code></pre>
 <p>然后按下操作符</p>
-<h2 id="快捷键-我知道的">快捷键(我知道的)</h2>
+<h2 id="快捷键我知道的">快捷键(我知道的)</h2>
 <h3 id="保存进程并退出">保存进程并退出</h3>
 <p>d</p>
-<p>下次启动使用```tmux attach -t&quot;加上创建时的名字</p>
+<p>下次启动使用```tmux attach -t"加上创建时的名字</p>
 <p>建议创建alias,节省时间和生命(</p>
 <h3 id="创建多个窗口">创建多个窗口</h3>
 <p>% 在右边创建窗口</p>
@@ -379,7 +370,7 @@ linux中CR是ctrl
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">iterm2有什么用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zsh"><span class="nav-number">4.1.</span> <span class="nav-text">zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh"><span class="nav-number">4.2.</span> <span class="nav-text">oh-my-zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zshrc"><span class="nav-number">4.3.</span> <span class="nav-text">zshrc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alias-%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4"><span class="nav-number">4.3.1.</span> <span class="nav-text">alias 快捷指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#THEME"><span class="nav-number">4.3.2.</span> <span class="nav-text">THEME</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">tmux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">6.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE-%E6%88%91%E7%9F%A5%E9%81%93%E7%9A%84"><span class="nav-number">6.2.</span> <span class="nav-text">快捷键(我知道的)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E8%BF%9B%E7%A8%8B%E5%B9%B6%E9%80%80%E5%87%BA"><span class="nav-number">6.2.1.</span> <span class="nav-text">保存进程并退出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3"><span class="nav-number">6.2.2.</span> <span class="nav-text">创建多个窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E7%AA%97%E5%8F%A3"><span class="nav-number">6.2.3.</span> <span class="nav-text">切换窗口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">6.3.</span> <span class="nav-text">插件</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zsh"><span class="nav-number">3.1.</span> <span class="nav-text">zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh"><span class="nav-number">3.2.</span> <span class="nav-text">oh-my-zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zshrc"><span class="nav-number">3.3.</span> <span class="nav-text">zshrc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alias-%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4"><span class="nav-number">3.3.1.</span> <span class="nav-text">alias 快捷指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#theme"><span class="nav-number">3.3.2.</span> <span class="nav-text">THEME</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%88%E6%9E%9C"><span class="nav-number">4.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tmux"><span class="nav-number">5.</span> <span class="nav-text">tmux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-number">5.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%88%91%E7%9F%A5%E9%81%93%E7%9A%84"><span class="nav-number">5.2.</span> <span class="nav-text">快捷键(我知道的)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E8%BF%9B%E7%A8%8B%E5%B9%B6%E9%80%80%E5%87%BA"><span class="nav-number">5.2.1.</span> <span class="nav-text">保存进程并退出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3"><span class="nav-number">5.2.2.</span> <span class="nav-text">创建多个窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E7%AA%97%E5%8F%A3"><span class="nav-number">5.2.3.</span> <span class="nav-text">切换窗口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">5.3.</span> <span class="nav-text">插件</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

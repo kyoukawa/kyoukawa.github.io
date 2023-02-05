@@ -20,31 +20,20 @@
     var CONFIG = {"hostname":"kyoukawa.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="计算初速度为,与水平夹角为,初始高度为的斜抛运动曲线表达式">
+  <meta name="description" content="计算初速度为\(v_0\),与水平夹角为\(\theta\),初始高度为\(h\)的斜抛运动曲线表达式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="抛物线">
 <meta property="og:url" content="http://kyoukawa.github.io/20220923%E6%8A%9B%E7%89%A9%E7%BA%BF/index.html">
 <meta property="og:site_name" content="姜川的博客">
-<meta property="og:description" content="计算初速度为,与水平夹角为,初始高度为的斜抛运动曲线表达式">
+<meta property="og:description" content="计算初速度为\(v_0\),与水平夹角为\(\theta\),初始高度为\(h\)的斜抛运动曲线表达式">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://math.now.sh/?inline=v_0">
-<meta property="og:image" content="https://math.now.sh/?inline=%5Ctheta">
-<meta property="og:image" content="https://math.now.sh/?inline=h">
-<meta property="og:image" content="https://math.now.sh/?from=%5Cleft%5C%7B%0A%20%20%20%20%5Cbegin%7Barray%7D%7Bll%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20v_%7Bx0%7D%3Dv_0%5Ccdot%20%5Ccos%20%5Ctheta%20%5C%5C%0A%09%09%09v_%7By0%7D%3Dv_0%5Ccdot%20%5Csin%20%5Ctheta%0A%20%20%20%20%5Cend%7Barray%7D%0A%5Cright.%0A">
-<meta property="og:image" content="https://math.now.sh/?inline=v_x%3Dv_%7Bx0%7D">
-<meta property="og:image" content="https://math.now.sh/?from=%5Ctherefore%20t%3D%5Cfrac%7Bx%7D%7Bv_%7Bx0%7D%7D%3D%5Cfrac%7Bx%7D%7Bv_0%5Ccdot%20%5Ccos%20%5Ctheta%7D%0A">
-<meta property="og:image" content="https://math.now.sh/?inline=v_y%3Dv_%7By0%7D-gt">
-<meta property="og:image" content="https://math.now.sh/?from=%5Ctherefore%20%5CDelta%20y%3Dv_%7By0%7D%5Ccdot%20t-%5Cfrac%7B1%7D%7B2%7Dgt%5E2%0A">
-<meta property="og:image" content="https://math.now.sh/?from=y%3Dh%2Bv_%7By0%7D%5Ccdot%20t-%5Cfrac%7B1%7D%7B2%7Dgt%5E2%0A">
-<meta property="og:image" content="https://math.now.sh/?inline=t">
-<meta property="og:image" content="https://math.now.sh/?from=y%3Dh%2Bv_0%5Csin%20%5Ctheta%20%5Ccdot%20%5Cfrac%7Bx%7D%7Bv_0%5Ccos%20%5Ctheta%7D-%5Cfrac%7B1%7D%7B2%7Dg%5Cfrac%7Bx%5E2%7D%7Bv_0%5E2%5Ccos%5E2%20%5Ctheta%7D%0A">
 <meta property="og:image" content="http://kyoukawa.github.io/pic/20220923/1.png">
 <meta property="article:published_time" content="2022-09-22T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-01-19T10:27:36.867Z">
 <meta property="article:author" content="kyoukawa">
 <meta property="article:tag" content="物理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://math.now.sh/?inline=v_0">
+<meta name="twitter:image" content="http://kyoukawa.github.io/pic/20220923/1.png">
 
 <link rel="canonical" href="http://kyoukawa.github.io/20220923%E6%8A%9B%E7%89%A9%E7%BA%BF/">
 
@@ -234,12 +223,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>计算初速度为<img src="https://math.now.sh?inline=v_0" style="display:inline-block;margin: 0;"/>,与水平夹角为<img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;"/>,初始高度为<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;"/>的斜抛运动曲线表达式</p>
-<span id="more"></span>
-<p style=""><img src="https://math.now.sh?from=%5Cleft%5C%7B%0A%20%20%20%20%5Cbegin%7Barray%7D%7Bll%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20v_%7Bx0%7D%3Dv_0%5Ccdot%20%5Ccos%20%5Ctheta%20%5C%5C%0A%09%09%09v_%7By0%7D%3Dv_0%5Ccdot%20%5Csin%20%5Ctheta%0A%20%20%20%20%5Cend%7Barray%7D%0A%5Cright.%0A" /></p><p>做斜抛运动的物体在水平方向做匀速直线运动,<img src="https://math.now.sh?inline=v_x%3Dv_%7Bx0%7D" style="display:inline-block;margin: 0;"/></p>
-<p style=""><img src="https://math.now.sh?from=%5Ctherefore%20t%3D%5Cfrac%7Bx%7D%7Bv_%7Bx0%7D%7D%3D%5Cfrac%7Bx%7D%7Bv_0%5Ccdot%20%5Ccos%20%5Ctheta%7D%0A" /></p><p>在竖直方向做竖直上抛运动,<img src="https://math.now.sh?inline=v_y%3Dv_%7By0%7D-gt" style="display:inline-block;margin: 0;"/></p>
-<p style=""><img src="https://math.now.sh?from=%5Ctherefore%20%5CDelta%20y%3Dv_%7By0%7D%5Ccdot%20t-%5Cfrac%7B1%7D%7B2%7Dgt%5E2%0A" /></p><p style=""><img src="https://math.now.sh?from=y%3Dh%2Bv_%7By0%7D%5Ccdot%20t-%5Cfrac%7B1%7D%7B2%7Dgt%5E2%0A" /></p><p>代入<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;"/>得,</p>
-<p style=""><img src="https://math.now.sh?from=y%3Dh%2Bv_0%5Csin%20%5Ctheta%20%5Ccdot%20%5Cfrac%7Bx%7D%7Bv_0%5Ccos%20%5Ctheta%7D-%5Cfrac%7B1%7D%7B2%7Dg%5Cfrac%7Bx%5E2%7D%7Bv_0%5E2%5Ccos%5E2%20%5Ctheta%7D%0A" /></p><p><img src="../pic/20220923/1.png" alt="图像"></p>
+        <p>计算初速度为<span
+class="math inline">\(v_0\)</span>,与水平夹角为<span
+class="math inline">\(\theta\)</span>,初始高度为<span
+class="math inline">\(h\)</span>的斜抛运动曲线表达式 <span id="more"></span> <span
+class="math display">\[
+\left\{
+    \begin{array}{ll}
+            v_{x0}=v_0\cdot \cos \theta \\
+            v_{y0}=v_0\cdot \sin \theta
+    \end{array}
+\right.
+\]</span></p>
+<p>做斜抛运动的物体在水平方向做匀速直线运动,<span
+class="math inline">\(v_x=v_{x0}\)</span></p>
+<p><span class="math display">\[\therefore
+t=\frac{x}{v_{x0}}=\frac{x}{v_0\cdot \cos \theta}\]</span></p>
+<p>在竖直方向做竖直上抛运动,<span
+class="math inline">\(v_y=v_{y0}-gt\)</span></p>
+<p><span class="math display">\[\therefore \Delta y=v_{y0}\cdot
+t-\frac{1}{2}gt^2\]</span></p>
+<p><span class="math display">\[y=h+v_{y0}\cdot
+t-\frac{1}{2}gt^2\]</span></p>
+<p>代入<span class="math inline">\(t\)</span>得,</p>
+<p><span class="math display">\[y=h+v_0\sin \theta \cdot
+\frac{x}{v_0\cos \theta}-\frac{1}{2}g\frac{x^2}{v_0^2\cos^2
+\theta}\]</span></p>
+<figure>
+<img src="../pic/20220923/1.png" alt="图像" />
+<figcaption aria-hidden="true">图像</figcaption>
+</figure>
 
     </div>
 

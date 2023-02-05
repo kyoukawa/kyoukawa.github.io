@@ -218,17 +218,20 @@
       
           <h2 id="merge">merge</h2>
 <h3 id="要求">要求</h3>
-<p style=""><img src="https://math.now.sh?from=ul%3Cu%3Cur%3Cvl%3Cv%3Cvr%0A" /></p><h3 id="递归">递归</h3>
+<p><span
+class="math display">\[ul&lt;u&lt;ur&lt;vl&lt;v&lt;vr\]</span></p>
+<h3 id="递归">递归</h3>
 <p>选择pri小的当根(假设upri小)</p>
-<p style=""><img src="https://math.now.sh?from=ul%5Clarr%20u%5Cto%20merge%28ur%2Cv%29%0A" /></p><h3 id="出口">出口</h3>
+<p><span class="math display">\[ul\larr u\to merge(ur,v)\]</span></p>
+<h3 id="出口">出口</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">u == <span class="number">0</span> || v == <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <h3 id="应用">应用</h3>
-<p>删除<br>
-d = merge(dl,dr)(d引用)</p>
+<p>删除 d = merge(dl,dr)(d引用)</p>
 <h2 id="split">split</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">pair <span class="title">Split</span><span class="params">(node c, <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// RETURN (u,v) u&lt;x&lt;v</span></span><br><span class="line">    <span class="keyword">if</span> (x == c.key)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (x &lt; c.key)</span><br><span class="line">    &#123;</span><br><span class="line">        node v, u;</span><br><span class="line">        u = clu;</span><br><span class="line">        v = c;</span><br><span class="line">        <span class="comment">// v.rc = c.rc</span></span><br><span class="line">        pair cl = <span class="built_in">split</span>(c.lc, x);</span><br><span class="line">        v.lc = cl.first;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">make_pair</span>(u, v);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="插入">插入</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">split</span>(root, x);</span><br><span class="line"></span><br><span class="line">root = <span class="built_in">merge</span>(<span class="built_in">merge</span>(u, x), v);</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -301,16 +304,16 @@ d = merge(dl,dr)(d引用)</p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1>GTD</h1>
-<ol>
-<li>捕获任务(强调主动性)<img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/>收集箱</li>
+          <h1 id="gtd">GTD</h1>
+<ol type="1">
+<li>捕获任务(强调主动性)<span
+class="math inline">\(\to\)</span>收集箱</li>
 <li>明晰(判断是否可行和必要)</li>
 <li>复杂与否?</li>
-<li>短时间可以完成<img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/>立刻完成</li>
-<li>能否现在做<img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/>等待分区</li>
-<li>时间明确<img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/>日程</li>
-<li>回顾并执行(及时清理清单)</li>
-</ol>
+<li>短时间可以完成<span class="math inline">\(\to\)</span>立刻完成</li>
+<li>能否现在做<span class="math inline">\(\to\)</span>等待分区</li>
+<li>时间明确<span class="math inline">\(\to\)</span>日程</li>
+<li>回顾并执行(及时清理清单)
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/GTD/#more" rel="contents">
@@ -391,7 +394,10 @@ d = merge(dl,dr)(d引用)</p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>计算初速度为<img src="https://math.now.sh?inline=v_0" style="display:inline-block;margin: 0;"/>,与水平夹角为<img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;"/>,初始高度为<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;"/>的斜抛运动曲线表达式</p>
+          <p>计算初速度为<span
+class="math inline">\(v_0\)</span>,与水平夹角为<span
+class="math inline">\(\theta\)</span>,初始高度为<span
+class="math inline">\(h\)</span>的斜抛运动曲线表达式
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/20220923%E6%8A%9B%E7%89%A9%E7%BA%BF/#more" rel="contents">
@@ -472,7 +478,7 @@ d = merge(dl,dr)(d引用)</p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1>20220921物理笔记</h1>
+          <h1 id="物理笔记">20220921物理笔记</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/20220921%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -634,7 +640,7 @@ d = merge(dl,dr)(d引用)</p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>沧海桑田(海陆变迁,洋陆转化)</p>
+          <p>沧海桑田(海陆变迁,洋陆转化)
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/20220914%E5%9C%B0%E7%90%86%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -715,7 +721,7 @@ d = merge(dl,dr)(d引用)</p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>认识电路&amp;利用面包板搭建简单的电路</p>
+          <p>认识电路&amp;利用面包板搭建简单的电路
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/20220914%E7%94%B5%E5%AD%90%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -796,12 +802,11 @@ d = merge(dl,dr)(d引用)</p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><s>时间估的不准,早上只够写完注释</s></p>
-<h1>目录</h1>
-<ol>
+          <p><del>时间估的不准,早上只够写完注释</del></p>
+<h1 id="目录">目录</h1>
+<ol type="1">
 <li>《答谢中书书》 - 陶弘景</li>
-<li>《记承天寺夜游》- 苏轼</li>
-</ol>
+<li>《记承天寺夜游》- 苏轼
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/20220913%E8%AF%AD%E6%96%87%E7%AC%94%E8%AE%B0/#more" rel="contents">
@@ -882,7 +887,7 @@ d = merge(dl,dr)(d引用)</p>
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>明天小测!!!</p>
+          <p>明天小测!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/20220914%E6%94%BF%E6%B2%BB%E7%AC%94%E8%AE%B0/#more" rel="contents">

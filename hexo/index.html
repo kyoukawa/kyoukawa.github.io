@@ -221,19 +221,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>应cyh的要求,来写一下如何搭建hexo博客</p>
-<span id="more"></span>
-<h1>搭建</h1>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>创建blog文件夹并初始化</p>
-<p>在<code>_config.yml</code>文件中添加这段,注意repo替换成自己的github仓库的链接</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">ssh://git@github.com/kyoukawa/kyoukawa.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-<h1>创作</h1>
+        <p>应cyh的要求,来写一下如何搭建hexo博客 <span id="more"></span> # 搭建 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+创建blog文件夹并初始化</p>
+<p>在<code>_config.yml</code>文件中添加这段,注意repo替换成自己的github仓库的链接
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">ssh://git@github.com/kyoukawa/kyoukawa.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="创作">创作</h1>
 <p>在blog文件夹内<code>hexo new test</code>,然后生成<code>./source/_posts/test.md</code></p>
 <p>编辑test.md并保存,回到主目录</p>
-<h1>测试</h1>
+<h1 id="测试">测试</h1>
 <p>在主目录<code>hexo s</code>会建立本地的服务器,在浏览器打开链接即可</p>
-<h1>发布</h1>
+<h1 id="发布">发布</h1>
 <p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/kyoukawa/blog-source">博客源文件</a></p>
 <p>如果觉得整的不错,请给我github仓库一个star(</p>
@@ -320,7 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">搭建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">创作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">发布</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">创作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%91%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">发布</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
