@@ -162,6 +162,116 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/20220728/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/icon.png">
+      <meta itemprop="name" content="kyoukawa">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="姜川的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/20220728/" class="post-title-link" itemprop="url">字典树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-07-29 06:37:39" itemprop="dateCreated datePublished" datetime="2022-07-29T06:37:39+08:00">2022-07-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-01-19 18:27:36" itemprop="dateModified" datetime="2023-01-19T18:27:36+08:00">2023-01-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/blog-pre/" itemprop="url" rel="index"><span itemprop="name">blog-pre</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="字典树trie">字典树(Trie)</h1>
+<h2 id="引出问题">引出问题</h2>
+<blockquote>
+<p>如果你经常上网冲浪,在搜索时会发现有一个建议功能. <img
+src="/pic/20220728/DuckDuckGo.png" alt="DuckDuckGo的搜索建议功能" />
+那么这是怎么实现的呢?</p>
+</blockquote>
+<h2 id="前置知识">前置知识</h2>
+<p>首先我们要了解什么是字符串的前缀 ### 前缀 假设有一个字符串“ABC”
+我们称“A","AB"."ABC"为它的前缀.</p>
+<p>所以为了好研究,我们把问题简化成给定一个字符串,找出数据中所有以这个串为前缀的字符串.</p>
+<h2 id="算法设计">算法设计</h2>
+<p>假设数据中有<strong>n</strong>个字符串,最长为<strong>m</strong>,有<strong>k</strong>种字符
+### 暴力 <del>一个判断前缀有什么难的,我直接暴力循环</del></p>
+<p>如果是直接循环,那么单次查询的时间复杂度将是O(nm)</p>
+<p>所以暴力肯定行不通:(</p>
+<h3 id="字典树">字典树</h3>
+<h4 id="建树">建树</h4>
+<p>建一个树,每个节点都是一个字符串,根为空串.
+每个节点的孩子都是这个节点添加一个字符.</p>
+<p>就像这样(在iPad上用手画的,有亿点丑) <img src="/pic/20220728/建树.png"
+alt="建树" /></p>
+<p>这样的话,节点数量就是<strong>nm</strong>,但是时间复杂度减少了.
+建树每次插入,需要遍历到插入的字符串的每个前缀,所以复杂度<strong>O(m)</strong>
+所以建树总复杂度为<strong>O(nm)</strong></p>
+<h4 id="查询">查询</h4>
+<p>单次查询的复杂度则降低到了<strong>O(m)</strong> 比暴力少了不少:)</p>
+<h4 id="代码">代码</h4>
+<h5 id="定义">定义</h5>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n,m,tot=<span class="number">1</span>; <span class="comment">//n个字符串,m次查询,tot表示当前节点数量</span></span><br><span class="line"><span class="type">int</span> tr[maxn][<span class="number">26</span>]; <span class="comment">//tr[i][j]表示第i个节点添加第j种字符后到达哪个节点,第二维即k</span></span><br><span class="line"><span class="type">int</span> ed[maxn]; <span class="comment">//ed[i]表示以i号节点表示的字符串在数据中的数量</span></span><br></pre></td></tr></table></figure>
+<h5 id="建树-1">建树</h5>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Insert</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>; <span class="comment">//上次到达节点的下标</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">	<span class="comment">//循环每个字符</span></span><br><span class="line">        <span class="keyword">if</span> (tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="comment">//如果这个节点不存在</span></span><br><span class="line">            tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]=++tot; <span class="comment">//创建新节点,节点数量+1</span></span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]; <span class="comment">//保存当前下标</span></span><br><span class="line">    &#125;</span><br><span class="line">    ed[cur]++; <span class="comment">//插入结束</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="查询-1">查询</h5>
+<p>例如计算一个串在数据中所有的前缀的数量 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>,cnt=<span class="number">0</span>; <span class="comment">//cnt用来记录数量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ed[cur])&#123;</span><br><span class="line">        	cnt+=ed[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ed[cur]) cnt+=ed[cur];</span><br><span class="line">    <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+可以发现大体上与建树的代码一致</p>
+<p>快去试一试<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8306">luogu模版题</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/%E5%AD%97%E5%85%B8%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -640,14 +750,14 @@ smart grid; technology application</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
