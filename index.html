@@ -193,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-02-27 06:10:42" itemprop="dateModified" datetime="2023-02-27T06:10:42+08:00">2023-02-27</time>
+                <time title="Modified: 2023-02-27 06:13:21" itemprop="dateModified" datetime="2023-02-27T06:13:21+08:00">2023-02-27</time>
               </span>
 
           
@@ -331,10 +331,26 @@ a_i,b_i(1\le i\le n)\in R^+,\alpha &gt;0,\beta &gt;0,\alpha + \beta = 1
 (\sum_{i=1}^n b_i)^\beta \\
 \]</span></p>
 <h2 id="证明">证明</h2>
-<p>$$ <em>{i=1}^n a_i^b_i ^(</em>{i=1}^n a_i)<sup>(<em>{i=1}^n b_i)^\ \
-</em>{i=1}</sup>n ()<sup>()</sup> \</p>
-<p>(()<sup>()</sup>) = + (+) \ 由x单调性,()<sup>()</sup>+ \ <em>{i=1}^n
-()<sup>()</sup></em>{i=1}^n + = + = 1 $$</p>
+<p><span class="math display">\[
+\sum_{i=1}^n a_i^\alpha b_i ^\beta \le (\sum_{i=1}^n a_i)^\alpha\cdot
+(\sum_{i=1}^n b_i)^\beta \\
+\iff \frac{\sum_{i=1}^n a_i^\alpha b_i ^\beta}{(\sum_{i=1}^n
+a_i)^\alpha\cdot (\sum_{i=1}^n b_i)^\beta} \le 1 \\
+\iff \sum_{i=1}^n (\frac{a_i}{\sum_{j=1}^n a_j})^\alpha
+(\frac{b_i}{\sum_{j=1}^n b_j})^\beta \le 1 \\
+\ln ((\frac{a_i}{\sum_{j=1}^n a_j})^\alpha (\frac{b_i}{\sum_{j=1}^n
+b_j})^\beta) = \alpha \ln\frac{a_i}{\sum_{j=1}^n a_j}+\beta
+\frac{b_i}{\sum_{j=1}^n b_j}
+\le \ln(\frac{\alpha a_i}{\sum_{j=1}^n a_j}+\frac{\beta
+b_i}{\sum_{j=1}^n b_j}) \\
+由\ln x单调性,(\frac{a_i}{\sum_{j=1}^n a_j})^\alpha
+(\frac{b_i}{\sum_{j=1}^n b_j})^\beta\le\frac{\alpha a_i}{\sum_{j=1}^n
+a_j}+\frac{\beta b_i}{\sum_{j=1}^n b_j} (琴生不等式)\\
+\therefore \sum_{i=1}^n (\frac{a_i}{\sum_{j=1}^n a_j})^\alpha
+(\frac{b_i}{\sum_{j=1}^n b_j})^\beta\le\sum_{i=1}^n \frac{\alpha
+a_i}{\sum_{j=1}^n a_j}+\frac{\beta b_i}{\sum_{j=1}^n b_j} = \alpha +
+\beta = 1 \\
+\]</span></p>
 
       
     </div>
