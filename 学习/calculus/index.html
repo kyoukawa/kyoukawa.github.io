@@ -28,7 +28,7 @@
 <meta property="og:description" content="MathJax.Hub.Config({         extensions: [&quot;tex2jax.js&quot;],         jax: [&quot;input&#x2F;TeX&quot;, &quot;output&#x2F;HTML-CSS&quot;],         tex2jax: {             inlineMath: [ [&#39;$&#39;,&#39;$&#39;], [&quot;\\(&quot;,&quot;\\)&quot;] ],">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-05T12:41:22.000Z">
-<meta property="article:modified_time" content="2023-05-05T13:46:10.001Z">
+<meta property="article:modified_time" content="2023-05-05T23:06:01.264Z">
 <meta property="article:author" content="kyoukawa">
 <meta name="twitter:card" content="summary">
 
@@ -189,10 +189,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-05-05 20:41:22 / Modified: 21:46:10" itemprop="dateCreated datePublished" datetime="2023-05-05T20:41:22+08:00">2023-05-05</time>
+              <time title="Created: 2023-05-05 20:41:22" itemprop="dateCreated datePublished" datetime="2023-05-05T20:41:22+08:00">2023-05-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-06 07:06:01" itemprop="dateModified" datetime="2023-05-06T07:06:01+08:00">2023-05-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -234,8 +240,16 @@
 
 <p>亿年没更新博客了，冒个泡写个物p笔记</p>
 <p>ps: 悲惨的事情，我都快忘了latex咋用了😅</p>
-<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>由求导相关知识知，</p>
-<script type="math/tex; mode=display">y'= \frac{dy}{dx} = \frac{d}{dx}f(x) = f'(x)</script><script type="math/tex; mode=display">\therefore dy = f'(x)dx</script><p>主要用来估算</p>
+<p>完善:从gls讲义上搞了些题</p>
+<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>由导数定义，</p>
+<script type="math/tex; mode=display">
+\frac{dy}{dx} = f'(x)</script><script type="math/tex; mode=display">
+\therefore dy = f'(x)dx</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>例1:</p>
+<script type="math/tex; mode=display">
+半径为r_0的小球受热膨胀，半径增加dx，求体积变化量 \\
+由球体体积公式，V=\frac{4}{3}\pi r^3 \\
+dV = f'(x)dx \\
+     = 4\pi r_0^2\cdot dx</script><h2 id="法则"><a href="#法则" class="headerlink" title="法则"></a>法则</h2><p>与导数法则类似</p>
 <h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><h2 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h2><p>求原函数</p>
 <script type="math/tex; mode=display">
 dF(x) = f(x)dx \\ 
@@ -328,7 +342,7 @@ dF(x) = f(x)dx \\
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E5%88%86"><span class="nav-number">1.</span> <span class="nav-text">微分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text">不定积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%A2%E5%85%83%E7%A7%AF%E5%88%86"><span class="nav-number">2.2.</span> <span class="nav-text">换元积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-number">2.3.</span> <span class="nav-text">定积分</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E5%88%86"><span class="nav-number">1.</span> <span class="nav-text">微分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%95%E5%88%99"><span class="nav-number">1.3.</span> <span class="nav-text">法则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text">不定积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%A2%E5%85%83%E7%A7%AF%E5%88%86"><span class="nav-number">2.2.</span> <span class="nav-text">换元积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-number">2.3.</span> <span class="nav-text">定积分</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
