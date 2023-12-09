@@ -1,90 +1,31 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://kyoukawa.github.io/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://kyoukawa.github.io/icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://kyoukawa.github.io/icon.png">
+  <link rel="mask-icon" href="https://kyoukawa.github.io/icon.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
+<script class="next-config" data-name="main" type="application/json">{"hostname":"kyoukawa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="https://kyoukawa.github.io/icon.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="https://kyoukawa.github.io/icon.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="https://kyoukawa.github.io/icon.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="https://kyoukawa.github.io/icon.png?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="docker," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="项目介绍 高估了自己,项目效果与tapechat完全是天壤之别 主要是没有美工( 这个项目是2022年暑假和cyh一起搞的(主要是我 主要利用python中flask库和json库实现了如下功能:  用户注册 用户向他人提问箱提问 登录后查看自己提问箱 删库跑路的admin模式:)  项目地址 垃圾得很,知道的bug就一堆 翻新原因 新项目要用到http进行交互,不如直接拿flask现成代码:)">
+    <meta name="description" content="项目介绍 高估了自己,项目效果与tapechat完全是天壤之别 主要是没有美工( 这个项目是2022年暑假和cyh一起搞的(主要是我 主要利用python中flask库和json库实现了如下功能:  用户注册 用户向他人提问箱提问 登录后查看自己提问箱 删库跑路的admin模式:)  项目地址 垃圾得很,知道的bug就一堆  翻新原因 新项目要用到http进行交互,不如直接拿flask现成代码:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="fake-tapechat项目的docker化">
 <meta property="og:url" content="http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/fake-tapechat%E9%A1%B9%E7%9B%AE%E7%9A%84docker%E5%8C%96/index.html">
 <meta property="og:site_name" content="姜川的博客">
-<meta property="og:description" content="项目介绍 高估了自己,项目效果与tapechat完全是天壤之别 主要是没有美工( 这个项目是2022年暑假和cyh一起搞的(主要是我 主要利用python中flask库和json库实现了如下功能:  用户注册 用户向他人提问箱提问 登录后查看自己提问箱 删库跑路的admin模式:)  项目地址 垃圾得很,知道的bug就一堆 翻新原因 新项目要用到http进行交互,不如直接拿flask现成代码:)">
+<meta property="og:description" content="项目介绍 高估了自己,项目效果与tapechat完全是天壤之别 主要是没有美工( 这个项目是2022年暑假和cyh一起搞的(主要是我 主要利用python中flask库和json库实现了如下功能:  用户注册 用户向他人提问箱提问 登录后查看自己提问箱 删库跑路的admin模式:)  项目地址 垃圾得很,知道的bug就一堆  翻新原因 新项目要用到http进行交互,不如直接拿flask现成代码:">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-02T12:11:00.000Z">
 <meta property="article:modified_time" content="2023-09-12T11:36:37.755Z">
@@ -93,40 +34,14 @@
 <meta name="twitter:card" content="summary">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+<link rel="canonical" href="http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/fake-tapechat%E9%A1%B9%E7%9B%AE%E7%9A%84docker%E5%8C%96/">
 
 
 
-  <link rel="canonical" href="http://kyoukawa.github.io/旧博客搬运/fake-tapechat项目的docker化/"/>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/fake-tapechat%E9%A1%B9%E7%9B%AE%E7%9A%84docker%E5%8C%96/","path":"旧博客搬运/fake-tapechat项目的docker化/","title":"fake-tapechat项目的docker化"}</script>
 
-
-
-
-
-  <title>fake-tapechat项目的docker化 | 姜川的博客</title>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>fake-tapechat项目的docker化 | 姜川的博客</title>
   
 
 
@@ -136,6 +51,9 @@
 
 
 
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
@@ -143,213 +61,184 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end end --></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">姜川的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">姜川的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
   </div>
 </div>
 
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
 </nav>
 
 
 
- </div>
-    </header>
 
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+</header>
+        
+  
+  <aside class="sidebar">
 
-  <div id="posts" class="posts-expand">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text"> 项目介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E6%96%B0%E5%8E%9F%E5%9B%A0"><span class="nav-number">2.</span> <span class="nav-text"> 翻新原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text"> 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.1.</span> <span class="nav-text"> 注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text"> 添加文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dockerfile"><span class="nav-number">3.2.1.</span> <span class="nav-text"> Dockerfile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requirementstxt"><span class="nav-number">3.2.2.</span> <span class="nav-text"> requirements.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gunicornconfpy"><span class="nav-number">3.2.3.</span> <span class="nav-text"> gunicorn.conf.py</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAdocker%E9%95%9C%E5%83%8F"><span class="nav-number">3.3.</span> <span class="nav-text"> 创建docker镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cdocker"><span class="nav-number">3.4.</span> <span class="nav-text"> 运行docker</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="kyoukawa"
+      src="https://kyoukawa.github.io/icon.png">
+  <p class="site-author-name" itemprop="name">kyoukawa</p>
+  <div class="site-description" itemprop="description">灌水,也可能掺杂些许知识</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/kyoukawa" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;kyoukawa" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:kyoukawa@duck.com" title="E-Mail → mailto:kyoukawa@duck.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
     
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
 
   
 
-  
+
+<div class="post-block">
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/fake-tapechat%E9%A1%B9%E7%9B%AE%E7%9A%84docker%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
       <meta itemprop="image" content="https://kyoukawa.github.io/icon.png">
+      <meta itemprop="name" content="kyoukawa">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="姜川的博客">
+      <meta itemprop="description" content="灌水,也可能掺杂些许知识">
     </span>
 
-    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="fake-tapechat项目的docker化 | 姜川的博客">
+      <meta itemprop="description" content="">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          fake-tapechat项目的docker化
+        </h1>
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">fake-tapechat项目的docker化</h1>
-        
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-01-02T20:11:00+08:00">
-                2023-01-02
-              </time>
-            
+      <time title="Created: 2023-01-02 20:11:00" itemprop="dateCreated datePublished" datetime="2023-01-02T20:11:00+08:00">2023-01-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-12 19:36:37" itemprop="dateModified" datetime="2023-09-12T19:36:37+08:00">2023-09-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/" itemprop="url" rel="index"><span itemprop="name">旧博客搬运</span></a>
+        </span>
+    </span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/" itemprop="url" rel="index">
-                    <span itemprop="name">旧博客搬运</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
+  
+</div>
 
         </div>
       </header>
-    
 
     
     
     
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1>项目介绍</h1>
+    <div class="post-body" itemprop="articleBody"><h1 id="项目介绍"><a class="markdownIt-Anchor" href="#项目介绍"></a> 项目介绍</h1>
 <p><s>高估了自己,项目效果与tapechat完全是天壤之别</s> 主要是没有美工(</p>
 <p>这个项目是2022年暑假和cyh一起搞的(主要是我</p>
 <p>主要利用python中flask库和json库实现了如下功能:</p>
@@ -361,400 +250,129 @@
 </ol>
 <p><a target="_blank" rel="noopener" href="https://github.com/kyoukawa/fake-tapechat">项目地址</a></p>
 <p><s>垃圾得很,知道的bug就一堆</s></p>
-<h1>翻新原因</h1>
+<h1 id="翻新原因"><a class="markdownIt-Anchor" href="#翻新原因"></a> 翻新原因</h1>
 <p>新项目要用到http进行交互,不如直接拿flask现成代码:)</p>
-<h1>操作</h1>
+<h1 id="操作"><a class="markdownIt-Anchor" href="#操作"></a> 操作</h1>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/78432719">参考资料</a></p>
-<h2 id="注意事项">注意事项</h2>
+<h2 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h2>
 <ol>
 <li>请确保有好用的梯子,并设置了终端代理</li>
 <li>请提前安装docker</li>
 <li>端口不知为何不能设置为80,于是我改成了81</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.run(host=<span class="string">&quot;0.0.0.0&quot;</span>,port=<span class="number">81</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="添加文件">添加文件</h2>
+<h2 id="添加文件"><a class="markdownIt-Anchor" href="#添加文件"></a> 添加文件</h2>
 <p>文件名与标题应当完全一致,否则可能会出奇怪的bug</p>
-<h3 id="Dockerfile">Dockerfile</h3>
+<h3 id="dockerfile"><a class="markdownIt-Anchor" href="#dockerfile"></a> Dockerfile</h3>
 <p><code>Dockerfile</code></p>
 <p>注意没有后缀名!</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FROM python</span><br><span class="line">WORKDIR /website/fake-tapechat</span><br><span class="line"></span><br><span class="line">COPY requirements.txt ./</span><br><span class="line">RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"></span><br><span class="line">COPY . .</span><br><span class="line"></span><br><span class="line">CMD [&quot;gunicorn&quot;, &quot;main:app&quot;, &quot;-c&quot;, &quot;./gunicorn.conf.py&quot;]</span><br></pre></td></tr></table></figure>
-<h3 id="requirements-txt">requirements.txt</h3>
+<h3 id="requirementstxt"><a class="markdownIt-Anchor" href="#requirementstxt"></a> requirements.txt</h3>
 <p>用来告诉docker python需要安装的仓库(前面两个不能删,是用来后台运行的)</p>
 <p><code>requirements.txt</code></p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gunicorn</span><br><span class="line">gevent</span><br><span class="line">flask</span><br></pre></td></tr></table></figure>
-<h3 id="gunicorn-conf-py"><a target="_blank" rel="noopener" href="http://gunicorn.conf.py">gunicorn.conf.py</a></h3>
+<h3 id="gunicornconfpy"><a class="markdownIt-Anchor" href="#gunicornconfpy"></a> <a target="_blank" rel="noopener" href="http://gunicorn.conf.py">gunicorn.conf.py</a></h3>
 <p><code>gunicorn.conf.py</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">workers = <span class="number">5</span></span><br><span class="line">worker_class = <span class="string">&quot;gevent&quot;</span></span><br><span class="line"><span class="comment"># 多线程</span></span><br><span class="line">bind = <span class="string">&quot;0.0.0.0:80&quot;</span></span><br><span class="line"><span class="comment"># gunicorn端口设置</span></span><br></pre></td></tr></table></figure>
-<h2 id="创建docker镜像">创建docker镜像</h2>
+<h2 id="创建docker镜像"><a class="markdownIt-Anchor" href="#创建docker镜像"></a> 创建docker镜像</h2>
 <p>在终端运行脚本,flask可以改为任意名字(注意后面有个点)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker build -t <span class="string">&#x27;ftc&#x27;</span> .</span><br></pre></td></tr></table></figure>
-<h2 id="运行docker">运行docker</h2>
+<h2 id="运行docker"><a class="markdownIt-Anchor" href="#运行docker"></a> 运行docker</h2>
 <p>博客修改:docker配置文件夹映射</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d -p 81:81 --name ftc --privileged=<span class="literal">true</span> -v ~/Documents/GitHub/fake-tapechat:/fake-tapechat ftc</span><br></pre></td></tr></table></figure>
 <p>打开浏览器访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:81">http://127.0.0.1:81</a> 即可</p>
 
-      
     </div>
-    
-    
-    
 
     
-
     
-
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/docker/" rel="tag"># docker</a>
-          
-        </div>
-      
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-      
-      
-      
+  <div class="social-list">
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/%E5%85%AB%E4%B8%8A%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E6%88%BF%E9%97%B4%E5%B8%83%E7%BD%AE/" rel="next" title="八上期末考试房间布置">
-                <i class="fa fa-chevron-left"></i> 八上期末考试房间布置
-              </a>
-            
-          </div>
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/bilibili-download-1080p/" rel="prev" title="bilibili-download-1080p">
-                bilibili-download-1080p <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="https://kyoukawa.github.io/icon.png"
-                alt="" />
-            
-              <p class="site-author-name" itemprop="name"></p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">52</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">项目介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">翻新原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">添加文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dockerfile"><span class="nav-number">3.2.1.</span> <span class="nav-text">Dockerfile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requirements-txt"><span class="nav-number">3.2.2.</span> <span class="nav-text">requirements.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gunicorn-conf-py"><span class="nav-number">3.2.3.</span> <span class="nav-text">gunicorn.conf.py</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAdocker%E9%95%9C%E5%83%8F"><span class="nav-number">3.3.</span> <span class="nav-text">创建docker镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cdocker"><span class="nav-number">3.4.</span> <span class="nav-text">运行docker</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+            <span class="label">RSS</span>
+          </a>
       </div>
-    </main>
+  </div>
+</div>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">kyoukawa</span>
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"># docker</a>
+          </div>
 
-  
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/%E5%85%AB%E4%B8%8A%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E6%88%BF%E9%97%B4%E5%B8%83%E7%BD%AE/" rel="prev" title="八上期末考试房间布置">
+                  <i class="fa fa-angle-left"></i> 八上期末考试房间布置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/bilibili-download-1080p/" rel="next" title="bilibili-download-1080p">
+                  bilibili-download-1080p <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
 
-        
+</div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">kyoukawa</span>
   </div>
 
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
+    </div>
+  </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
 
 
 
@@ -766,24 +384,6 @@
 
 
 
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
-
-
-  
 
 </body>
 </html>
