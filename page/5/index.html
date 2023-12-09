@@ -234,8 +234,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>MTMR 介绍</h1>
-<p><a target="_blank" rel="noopener" href="https://github.com/Toxblh/MTMR">Github 仓库</a><br>
+          <h1 id="mtmr-介绍"><a class="markdownIt-Anchor" href="#mtmr-介绍"></a> MTMR 介绍</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/Toxblh/MTMR">Github 仓库</a><br />
 一个通过JSON文件自定义touch bar的APP</p>
           <!--noindex-->
             <div class="post-button">
@@ -421,7 +421,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>前言</h1>
+          <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
 <p>适度折腾,不要太花里胡哨影响学习(<s>亲身经历</s></p>
           <!--noindex-->
             <div class="post-button">
@@ -606,43 +606,43 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>字典树(Trie)</h1>
-<h2 id="引出问题">引出问题</h2>
+          <h1 id="字典树trie"><a class="markdownIt-Anchor" href="#字典树trie"></a> 字典树(Trie)</h1>
+<h2 id="引出问题"><a class="markdownIt-Anchor" href="#引出问题"></a> 引出问题</h2>
 <blockquote>
-<p>如果你经常上网冲浪,在搜索时会发现有一个建议功能.<br>
-<img src="/pic/20220728/DuckDuckGo.png" alt="DuckDuckGo的搜索建议功能"><br>
+<p>如果你经常上网冲浪,在搜索时会发现有一个建议功能.<br />
+<img src="/pic/20220728/DuckDuckGo.png" alt="DuckDuckGo的搜索建议功能" /><br />
 那么这是怎么实现的呢?</p>
 </blockquote>
-<h2 id="前置知识">前置知识</h2>
+<h2 id="前置知识"><a class="markdownIt-Anchor" href="#前置知识"></a> 前置知识</h2>
 <p>首先我们要了解什么是字符串的前缀</p>
-<h3 id="前缀">前缀</h3>
-<p>假设有一个字符串“ABC”<br>
+<h3 id="前缀"><a class="markdownIt-Anchor" href="#前缀"></a> 前缀</h3>
+<p>假设有一个字符串“ABC”<br />
 我们称“A&quot;,“AB”.&quot;ABC&quot;为它的前缀.</p>
 <p>所以为了好研究,我们把问题简化成给定一个字符串,找出数据中所有以这个串为前缀的字符串.</p>
-<h2 id="算法设计">算法设计</h2>
+<h2 id="算法设计"><a class="markdownIt-Anchor" href="#算法设计"></a> 算法设计</h2>
 <p>假设数据中有<strong>n</strong>个字符串,最长为<strong>m</strong>,有<strong>k</strong>种字符</p>
-<h3 id="暴力">暴力</h3>
+<h3 id="暴力"><a class="markdownIt-Anchor" href="#暴力"></a> 暴力</h3>
 <p><s>一个判断前缀有什么难的,我直接暴力循环</s></p>
 <p>如果是直接循环,那么单次查询的时间复杂度将是O(nm)</p>
 <p>所以暴力肯定行不通:(</p>
-<h3 id="字典树">字典树</h3>
-<h4 id="建树">建树</h4>
-<p>建一个树,每个节点都是一个字符串,根为空串.<br>
+<h3 id="字典树"><a class="markdownIt-Anchor" href="#字典树"></a> 字典树</h3>
+<h4 id="建树"><a class="markdownIt-Anchor" href="#建树"></a> 建树</h4>
+<p>建一个树,每个节点都是一个字符串,根为空串.<br />
 每个节点的孩子都是这个节点添加一个字符.</p>
-<p>就像这样(在iPad上用手画的,有亿点丑)<br>
-<img src="/pic/20220728/%E5%BB%BA%E6%A0%91.png" alt="建树"></p>
-<p>这样的话,节点数量就是<strong>nm</strong>,但是时间复杂度减少了.<br>
-建树每次插入,需要遍历到插入的字符串的每个前缀,所以复杂度<strong>O(m)</strong><br>
+<p>就像这样(在iPad上用手画的,有亿点丑)<br />
+<img src="/pic/20220728/%E5%BB%BA%E6%A0%91.png" alt="建树" /></p>
+<p>这样的话,节点数量就是<strong>nm</strong>,但是时间复杂度减少了.<br />
+建树每次插入,需要遍历到插入的字符串的每个前缀,所以复杂度<strong>O(m)</strong><br />
 所以建树总复杂度为<strong>O(nm)</strong></p>
-<h4 id="查询">查询</h4>
-<p>单次查询的复杂度则降低到了<strong>O(m)</strong><br>
+<h4 id="查询"><a class="markdownIt-Anchor" href="#查询"></a> 查询</h4>
+<p>单次查询的复杂度则降低到了<strong>O(m)</strong><br />
 比暴力少了不少:)</p>
-<h4 id="代码">代码</h4>
-<h5 id="定义">定义</h5>
+<h4 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h4>
+<h5 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h5>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n,m,tot=<span class="number">1</span>; <span class="comment">//n个字符串,m次查询,tot表示当前节点数量</span></span><br><span class="line"><span class="type">int</span> tr[maxn][<span class="number">26</span>]; <span class="comment">//tr[i][j]表示第i个节点添加第j种字符后到达哪个节点,第二维即k</span></span><br><span class="line"><span class="type">int</span> ed[maxn]; <span class="comment">//ed[i]表示以i号节点表示的字符串在数据中的数量</span></span><br></pre></td></tr></table></figure>
-<h5 id="建树-2">建树</h5>
+<h5 id="建树-2"><a class="markdownIt-Anchor" href="#建树-2"></a> 建树</h5>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Insert</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>; <span class="comment">//上次到达节点的下标</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">	<span class="comment">//循环每个字符</span></span><br><span class="line">        <span class="keyword">if</span> (tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="comment">//如果这个节点不存在</span></span><br><span class="line">            tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]=++tot; <span class="comment">//创建新节点,节点数量+1</span></span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]; <span class="comment">//保存当前下标</span></span><br><span class="line">    &#125;</span><br><span class="line">    ed[cur]++; <span class="comment">//插入结束</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="查询-2">查询</h5>
+<h5 id="查询-2"><a class="markdownIt-Anchor" href="#查询-2"></a> 查询</h5>
 <p>例如计算一个串在数据中所有的前缀的数量</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>,cnt=<span class="number">0</span>; <span class="comment">//cnt用来记录数量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ed[cur])&#123;</span><br><span class="line">        	cnt+=ed[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ed[cur]) cnt+=ed[cur];</span><br><span class="line">    <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>可以发现大体上与建树的代码一致</p>
@@ -731,7 +731,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>字典树(Trie)</h1>
+          <h1 id="字典树trie"><a class="markdownIt-Anchor" href="#字典树trie"></a> 字典树(Trie)</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/%E5%AD%97%E5%85%B8%E6%A0%91/#more" rel="contents">
@@ -917,7 +917,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>素数筛</h1>
+          <h1 id="素数筛"><a class="markdownIt-Anchor" href="#素数筛"></a> 素数筛</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/%E7%B4%A0%E6%95%B0%E7%AD%9B/#more" rel="contents">
@@ -1009,9 +1009,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>数学集训笔记1</h1>
+          <h1 id="数学集训笔记1"><a class="markdownIt-Anchor" href="#数学集训笔记1"></a> 数学集训笔记1</h1>
 <p><s>昨天晚上上一天课懒得写了</s>,现在赶紧记录一下</p>
-<h1>知识点总结</h1>
+<h1 id="知识点总结"><a class="markdownIt-Anchor" href="#知识点总结"></a> 知识点总结</h1>
 <ol>
 <li>函数奇偶性</li>
 <li>函数对称性(轴对称,中心对称以及绝对值函数的对称性)</li>
