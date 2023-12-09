@@ -123,7 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E6%A0%91trie"><span class="nav-number">1.</span> <span class="nav-text"> 字典树(Trie)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%87%BA%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text"> 引出问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">1.2.</span> <span class="nav-text"> 前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%BC%80"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 前缀</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.3.</span> <span class="nav-text"> 算法设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%B4%E5%8A%9B"><span class="nav-number">1.3.1.</span> <span class="nav-text"> 暴力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E6%A0%91"><span class="nav-number">1.3.2.</span> <span class="nav-text"> 字典树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BB%BA%E6%A0%91"><span class="nav-number">1.3.2.1.</span> <span class="nav-text"> 建树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.3.2.2.</span> <span class="nav-text"> 查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.2.3.</span> <span class="nav-text"> 代码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.2.3.1.</span> <span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BB%BA%E6%A0%91-2"><span class="nav-number">1.3.2.3.2.</span> <span class="nav-text"> 建树</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2-2"><span class="nav-number">1.3.2.3.3.</span> <span class="nav-text"> 查询</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">字典树(Trie)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%87%BA%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">引出问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">1.2.</span> <span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%BC%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">前缀</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.3.</span> <span class="nav-text">算法设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%B4%E5%8A%9B"><span class="nav-number">1.3.1.</span> <span class="nav-text">暴力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E6%A0%91"><span class="nav-number">1.3.2.</span> <span class="nav-text">字典树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BB%BA%E6%A0%91"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">建树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.2.3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BB%BA%E6%A0%91-2"><span class="nav-number">1.3.2.3.2.</span> <span class="nav-text">建树</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2-2"><span class="nav-number">1.3.2.3.3.</span> <span class="nav-text">查询</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -241,44 +241,44 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="字典树trie"><a class="markdownIt-Anchor" href="#字典树trie"></a> 字典树(Trie)</h1>
+    <div class="post-body" itemprop="articleBody"><h1>字典树(Trie)</h1>
 <span id="more"></span>
-<h2 id="引出问题"><a class="markdownIt-Anchor" href="#引出问题"></a> 引出问题</h2>
+<h2 id="引出问题">引出问题</h2>
 <blockquote>
-<p>如果你经常上网冲浪,在搜索时会发现有一个建议功能.<br />
-<img src="/pic/20220728/DuckDuckGo.png" alt="DuckDuckGo的搜索建议功能" /><br />
+<p>如果你经常上网冲浪,在搜索时会发现有一个建议功能.<br>
+<img src="/pic/20220728/DuckDuckGo.png" alt="DuckDuckGo的搜索建议功能"><br>
 那么这是怎么实现的呢?</p>
 </blockquote>
-<h2 id="前置知识"><a class="markdownIt-Anchor" href="#前置知识"></a> 前置知识</h2>
+<h2 id="前置知识">前置知识</h2>
 <p>首先我们要了解什么是字符串的前缀</p>
-<h3 id="前缀"><a class="markdownIt-Anchor" href="#前缀"></a> 前缀</h3>
-<p>假设有一个字符串“ABC”<br />
+<h3 id="前缀">前缀</h3>
+<p>假设有一个字符串“ABC”<br>
 我们称“A&quot;,“AB”.&quot;ABC&quot;为它的前缀.</p>
 <p>所以为了好研究,我们把问题简化成给定一个字符串,找出数据中所有以这个串为前缀的字符串.</p>
-<h2 id="算法设计"><a class="markdownIt-Anchor" href="#算法设计"></a> 算法设计</h2>
+<h2 id="算法设计">算法设计</h2>
 <p>假设数据中有|n|个字符串,最长为|m|,有|k|种字符</p>
-<h3 id="暴力"><a class="markdownIt-Anchor" href="#暴力"></a> 暴力</h3>
+<h3 id="暴力">暴力</h3>
 <p><s>一个判断前缀有什么难的,我直接暴力循环</s></p>
 <p>如果是直接循环,那么单次查询的时间复杂度将是O(nm)</p>
 <p>所以暴力肯定行不通:(</p>
-<h3 id="字典树"><a class="markdownIt-Anchor" href="#字典树"></a> 字典树</h3>
-<h4 id="建树"><a class="markdownIt-Anchor" href="#建树"></a> 建树</h4>
-<p>建一个树,每个节点都是一个字符串,根为空串.<br />
+<h3 id="字典树">字典树</h3>
+<h4 id="建树">建树</h4>
+<p>建一个树,每个节点都是一个字符串,根为空串.<br>
 每个节点的孩子都是这个节点添加一个字符.</p>
-<p>就像这样(在iPad上用手画的,有亿点丑)<br />
-<img src="/pic/20220728/%E5%BB%BA%E6%A0%91.png" alt="建树" /></p>
-<p>这样的话,节点数量就是|nm|,但是时间复杂度减少了.<br />
-建树每次插入,需要遍历到插入的字符串的每个前缀,所以复杂度|O(m)|<br />
+<p>就像这样(在iPad上用手画的,有亿点丑)<br>
+<img src="/pic/20220728/%E5%BB%BA%E6%A0%91.png" alt="建树"></p>
+<p>这样的话,节点数量就是|nm|,但是时间复杂度减少了.<br>
+建树每次插入,需要遍历到插入的字符串的每个前缀,所以复杂度|O(m)|<br>
 所以建树总复杂度为|O(nm)|</p>
-<h4 id="查询"><a class="markdownIt-Anchor" href="#查询"></a> 查询</h4>
-<p>单次查询的复杂度则降低到了|O(m)|<br />
+<h4 id="查询">查询</h4>
+<p>单次查询的复杂度则降低到了|O(m)|<br>
 比暴力少了不少:)</p>
-<h4 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h4>
-<h5 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h5>
+<h4 id="代码">代码</h4>
+<h5 id="定义">定义</h5>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n,m,tot=<span class="number">1</span>; <span class="comment">//n个字符串,m次查询,tot表示当前节点数量</span></span><br><span class="line"><span class="type">int</span> tr[maxn][<span class="number">26</span>]; <span class="comment">//tr[i][j]表示第i个节点添加第j种字符后到达哪个节点,第二维即k</span></span><br><span class="line"><span class="type">int</span> ed[maxn]; <span class="comment">//ed[i]表示以i号节点表示的字符串在数据中的数量</span></span><br></pre></td></tr></table></figure>
-<h5 id="建树-2"><a class="markdownIt-Anchor" href="#建树-2"></a> 建树</h5>
+<h5 id="建树-2">建树</h5>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Insert</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>; <span class="comment">//上次到达节点的下标</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">	<span class="comment">//循环每个字符</span></span><br><span class="line">        <span class="keyword">if</span> (tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="comment">//如果这个节点不存在</span></span><br><span class="line">            tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]=++tot; <span class="comment">//创建新节点,节点数量+1</span></span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>]; <span class="comment">//保存当前下标</span></span><br><span class="line">    &#125;</span><br><span class="line">    ed[cur]++; <span class="comment">//插入结束</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="查询-2"><a class="markdownIt-Anchor" href="#查询-2"></a> 查询</h5>
+<h5 id="查询-2">查询</h5>
 <p>例如计算一个串在数据中所有的前缀的数量</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(string str)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> cur=<span class="number">1</span>,cnt=<span class="number">0</span>; <span class="comment">//cnt用来记录数量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">char</span> ch: str)&#123;</span><br><span class="line">        <span class="keyword">if</span>(ed[cur])&#123;</span><br><span class="line">        	cnt+=ed[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        cur=tr[cur][ch-<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ed[cur]) cnt+=ed[cur];</span><br><span class="line">    <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>可以发现大体上与建树的代码一致</p>
