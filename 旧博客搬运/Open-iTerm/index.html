@@ -61,7 +61,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<!-- hexo injector head_end end --></head>
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="姜川的博客" type="application/atom+xml">
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -95,7 +96,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
   </ul>
 </nav>
 
@@ -120,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text"> 代码</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -241,7 +242,7 @@
     <div class="post-body" itemprop="articleBody"><p>好多天没碰Ubuntu了,有点难受.</p>
 <p>看到少数派的一篇讲AppleScript的文章突发奇想,准备做一个和Ubuntu一样的快捷键启动iTerm</p>
 <span id="more"></span>
-<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
+<h1>代码</h1>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> <span class="built_in">run</span> &#123;input, parameters&#125;</span><br><span class="line">	<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">&quot;System Events&quot;</span> <span class="keyword">to</span> <span class="keyword">set</span> isRunning <span class="keyword">to</span> exists (processes <span class="keyword">where</span> <span class="built_in">name</span> <span class="keyword">is</span> <span class="string">&quot;iTerm&quot;</span>)</span><br><span class="line">	<span class="comment">(*获取iTerm是否正在运行的信息*)</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> isRunning <span class="keyword">then</span></span><br><span class="line">		<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">&quot;iTerm&quot;</span></span><br><span class="line">			<span class="comment">(*正在运行则直接激活应用*)</span></span><br><span class="line">			<span class="built_in">activate</span></span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">&quot;iTerm&quot;</span></span><br><span class="line">			<span class="comment">(*没在运行则启动应用*)</span></span><br><span class="line">			reopen</span><br><span class="line">			<span class="built_in">activate</span></span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">	<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">&quot;System Events&quot;</span></span><br><span class="line">		key code <span class="number">18</span> using &#123;command down, option down&#125;</span><br><span class="line">		<span class="comment">(*按下command option 1*)</span></span><br><span class="line">		<span class="comment">(*18 对应数字1按键*)</span></span><br><span class="line">		<span class="comment">(*command option 1是iTerm内置快捷键,把1号窗口调到前台*)</span></span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line"><span class="keyword">end</span> <span class="built_in">run</span></span><br></pre></td></tr></table></figure>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
 <iframe src="//player.bilibili.com/player.html?aid=899745040&bvid=BV16N4y1F7nW&cid=809927435&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;" ></iframe></di

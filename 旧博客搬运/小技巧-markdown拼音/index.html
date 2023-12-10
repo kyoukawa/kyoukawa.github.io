@@ -61,7 +61,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<!-- hexo injector head_end end --></head>
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="姜川的博客" type="application/atom+xml">
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -95,7 +96,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
   </ul>
 </nav>
 
@@ -120,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%88%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text"> 效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%BC%E9%9F%B3%E5%AD%97%E7%AC%A6"><span class="nav-number">3.</span> <span class="nav-text"> 拼音字符</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">拼音字符</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -238,16 +239,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h1>
+    <div class="post-body" itemprop="articleBody"><h1>效果</h1>
 <ruby>
 你<rp>(</rp><rt>nǐ</rt><rp>)</rp>
 好<rp>(</rp><rt>hǎo</rt><rp>)</rp>
 </ruby>
 <span id="more"></span>
-<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
+<h1>代码</h1>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ruby</span>&gt;</span></span><br><span class="line">你<span class="tag">&lt;<span class="name">rp</span>&gt;</span>(<span class="tag">&lt;/<span class="name">rp</span>&gt;</span><span class="tag">&lt;<span class="name">rt</span>&gt;</span>nǐ<span class="tag">&lt;/<span class="name">rt</span>&gt;</span><span class="tag">&lt;<span class="name">rp</span>&gt;</span>)<span class="tag">&lt;/<span class="name">rp</span>&gt;</span></span><br><span class="line">好<span class="tag">&lt;<span class="name">rp</span>&gt;</span>(<span class="tag">&lt;/<span class="name">rp</span>&gt;</span><span class="tag">&lt;<span class="name">rt</span>&gt;</span>hǎo<span class="tag">&lt;/<span class="name">rt</span>&gt;</span><span class="tag">&lt;<span class="name">rp</span>&gt;</span>)<span class="tag">&lt;/<span class="name">rp</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ruby</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>利用markdown插入Ruby代码实现在文字上方显示拼音(非常适合语文笔记)</p>
-<h1 id="拼音字符"><a class="markdownIt-Anchor" href="#拼音字符"></a> 拼音字符</h1>
+<h1>拼音字符</h1>
 <table>
 <thead>
 <tr>
