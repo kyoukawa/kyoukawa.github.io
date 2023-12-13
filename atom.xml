@@ -6,7 +6,7 @@
   <link href="http://kyoukawa.github.io/atom.xml" rel="self"/>
   
   <link href="http://kyoukawa.github.io/"/>
-  <updated>2023-12-09T14:43:51.401Z</updated>
+  <updated>2023-12-13T15:30:21.407Z</updated>
   <id>http://kyoukawa.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>雪</title>
+    <link href="http://kyoukawa.github.io/20231213/"/>
+    <id>http://kyoukawa.github.io/20231213/</id>
+    <published>2023-12-12T16:00:00.000Z</published>
+    <updated>2023-12-13T15:30:21.407Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;因为据说有暴雪，这几天回到了家里上网课。&lt;/p&gt;
+&lt;p&gt;正好是个思考的契机。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="思考" scheme="http://kyoukawa.github.io/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title>重归稳恒态</title>
@@ -491,32 +509,6 @@
     
     
     <category term="docker" scheme="http://kyoukawa.github.io/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>八上期末考试房间布置</title>
-    <link href="http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/%E5%85%AB%E4%B8%8A%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E6%88%BF%E9%97%B4%E5%B8%83%E7%BD%AE/"/>
-    <id>http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/%E5%85%AB%E4%B8%8A%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E6%88%BF%E9%97%B4%E5%B8%83%E7%BD%AE/</id>
-    <published>2022-12-31T17:27:00.000Z</published>
-    <updated>2023-09-12T11:36:37.755Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;s&gt;我就想最后一天布置&lt;/s&gt;&lt;/p&gt;
-&lt;h1&gt;要求&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;%E7%9B%91%E8%80%83%E8%AE%BE%E5%A4%87.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="旧博客搬运" scheme="http://kyoukawa.github.io/categories/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/"/>
-    
     
   </entry>
   
