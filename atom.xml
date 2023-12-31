@@ -6,7 +6,7 @@
   <link href="http://kyoukawa.github.io/atom.xml" rel="self"/>
   
   <link href="http://kyoukawa.github.io/"/>
-  <updated>2023-12-14T15:52:09.661Z</updated>
+  <updated>2023-12-31T15:45:41.025Z</updated>
   <id>http://kyoukawa.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python 渲染拉普拉斯方程</title>
+    <link href="http://kyoukawa.github.io/20231231/"/>
+    <id>http://kyoukawa.github.io/20231231/</id>
+    <published>2023-12-30T16:00:00.000Z</published>
+    <updated>2023-12-31T15:45:41.025Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2023 最后一篇，快速水一下。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="物理竞赛" scheme="http://kyoukawa.github.io/tags/%E7%89%A9%E7%90%86%E7%AB%9E%E8%B5%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>数学加油站</title>
@@ -474,34 +491,6 @@
     
     
     <category term="数学竞赛" scheme="http://kyoukawa.github.io/tags/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bilibili-download-1080p</title>
-    <link href="http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/bilibili-download-1080p/"/>
-    <id>http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/bilibili-download-1080p/</id>
-    <published>2023-01-16T13:38:51.000Z</published>
-    <updated>2023-09-12T11:36:37.755Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;由于b站sb的操作,现在不加配置的话,利用各种下载器都只能下载480p的视频:(&lt;/p&gt;
-&lt;p&gt;今天在v2ex看到了解决方案&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;首先安装yt-dlp(早就有)&lt;/li&gt;
-&lt;li&gt;在浏览器登录b站(用来搞到cookie)&lt;/li&gt;
-&lt;li&gt;然后在下载时</summary>
-        
-      
-    
-    
-    
-    <category term="旧博客搬运" scheme="http://kyoukawa.github.io/categories/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/"/>
-    
     
   </entry>
   

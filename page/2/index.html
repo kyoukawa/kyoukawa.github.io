@@ -132,7 +132,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +168,282 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/20230822/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://kyoukawa.github.io/icon.png">
+      <meta itemprop="name" content="kyoukawa">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="姜川的博客">
+      <meta itemprop="description" content="灌水,也可能掺杂些许知识">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 姜川的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/20230822/" class="post-title-link" itemprop="url">20230822</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-08-22 00:00:00" itemprop="dateCreated datePublished" datetime="2023-08-22T00:00:00+08:00">2023-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-12-09 15:45:40" itemprop="dateModified" datetime="2023-12-09T15:45:40+08:00">2023-12-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>我又来啦!</p>
+<p>书接上文</p>
+<h1>分子动理论剩余部分</h1>
+<h2 id="方均根">方均根</h2>
+<p>$$v_{rms} = \sqrt{\bar{v^2}} = \sqrt{\frac{3kT}{m}} = \sqrt{\frac{3RT}{mN_A}} = \sqrt{\frac{3RT}{\mu}}$$</p>
+<h2 id="自由度与能量均分定理">自由度与能量均分定理</h2>
+<h3 id="自由度">自由度</h3>
+<table>
+<thead>
+<tr>
+<th>分子类型</th>
+<th>平动自由度$t$</th>
+<th>转动自由度$r$</th>
+<th>自由度$i$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单原子分子</td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>刚性双原子分子</td>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>刚性多原子分子</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="能量均分定理">能量均分定理</h3>
+<p>显然对于各自由度是平等的,从而得出各自由度能量相等</p>
+<p>$$\bar{\epsilon_k} = \frac{3}{2}kT$$</p>
+<p>$$E_x = \frac{1}{2}m\bar{v_x^2} = \frac{1}{2}kT$$</p>
+<p>由各自由度能量相等得,</p>
+<p>$$E = i\cdot E_x = \frac{i}{2}kT$$</p>
+<h3 id="理想气体概念的完善">理想气体概念的完善</h3>
+<p>忽略分子体积,忽略分子间的相互作用力</p>
+<p>$\Rightarrow$无势能</p>
+<p>$\Rightarrow$内能 = 分子热动能</p>
+<p>一般的,</p>
+<p>$$E = E_p + E_k$$</p>
+<p>由上述结论,对于理想气体</p>
+<p>$$E = E_k = N \cdot \frac{i}{2}kT = \frac{i}{2}\nu RT$$</p>
+<p>即</p>
+<p>$$\boxed{E = \frac{i}{2}\nu RT}$$</p>
+<h3 id="速率分布律">速率分布律</h3>
+<p>取区间$[v,v+dv]$,有$dN$个粒子的速率$v\in[v,v+dv]$</p>
+<p>有$f(v)$使得</p>
+<p>$$f(v)dv = \frac{dN}{N}$$</p>
+<p>$f(v)$称作<strong>速率分布函数</strong></p>
+<p>$\frac{dN}{N}$即粒子速率属于该区间的概率</p>
+<p>因而,</p>
+<p>$$\int_0^\infty f(v)dv = \frac{\int dN}{N} = 1$$</p>
+<p>于是 gls 直接给出了$f(x)$(不加证明doge,甚至一开始写错了</p>
+<p>$$f(v) = 4\pi(\frac{m}{2\pi kT})^{\frac{3}{2}}v^2e^{\frac{-mv^2}{2kT}}$$</p>
+<p>(好池沼的式子,一会研究下怎么证明</p>
+<p>然后又是不加证明地给出了</p>
+<table>
+<thead>
+<tr>
+<th>名字</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方均根  root mean square</td>
+<td>$v_{rms} = \sqrt{\frac{3RT}{\mu}}$</td>
+</tr>
+<tr>
+<td>最概然速率</td>
+<td>$v_p = \sqrt{\frac{2RT}{\mu}}$</td>
+</tr>
+<tr>
+<td>均速</td>
+<td>$\bar{v} = \sqrt{\frac{8RT}{\pi\mu}}$</td>
+</tr>
+<tr>
+<td>平均泻流速率</td>
+<td>$\bar{n} = \frac{1}{4}n\bar{v}$ ,第二个 $n$ 是分子数密度</td>
+</tr>
+<tr>
+<td>平均自由程</td>
+<td>$\bar{\lambda} = \frac{kT}{\sqrt{2}\pi d^2p}$</td>
+</tr>
+<tr>
+<td>平均碰撞概率</td>
+<td>$\bar{z} = \frac{\bar{v}}{\bar{\lambda}}$</td>
+</tr>
+</tbody>
+</table>
+<p><s>gls问小伙子真听懂了吗，一下子把小伙子问傻了，真懂了吗？如懂！</s></p>
+<h1>热力学定律</h1>
+<p>新课(喜)</p>
+<h2 id="热力学第零定律">热力学第零定律</h2>
+<p>$A,B$处于平衡态,$B,C$处于平衡态,则$A,C$处于平衡态</p>
+<p>其中$B$其实就充当了温度计的角色</p>
+<p><s>鉴定为正确的废话</s></p>
+<h2 id="热力学第一定律">热力学第一定律</h2>
+<p>改变内能的方式:</p>
+<ol>
+<li>吸放热</li>
+<li>做功</li>
+</ol>
+<p>$$Q = \Delta E + W$$</p>
+<p>其中</p>
+<p>$Q$表示吸放热,吸热取正、放热取负,单位为$J$</p>
+<p>$\Delta E$ 为内能变化</p>
+<p>$W$为对外做功</p>
+<h3 id="内能">内能</h3>
+<p>$$E = \frac{i}{2}\nu RT$$</p>
+<h3 id="做功">做功</h3>
+<p>$$dW = F\cdot dl = Ps\cdot dl = PdV$$</p>
+<p>$$\therefore W = \int_{v_1}^{v_2}PdV$$</p>
+<h3 id="吸放热">吸放热</h3>
+<p>将&quot;固&quot;、“液”、“气&quot;称为&quot;相”</p>
+<h4 id="相变潜热-L">相变潜热$L$</h4>
+<p>物态变化中吸放热(不计方向,均为正)</p>
+<h4 id="热传导">热传导</h4>
+<p>$$dQ = -\kappa(\frac{dT}{dz})dsdt$$</p>
+<p>其中</p>
+<p>$dQ$为传热量</p>
+<p>$\kappa$为热导率,不是$k$是$kappa:\kappa$</p>
+<p>$\frac{dT}{dz}$为温度梯度</p>
+<p>负号是因为热量是高温传给低温的</p>
+<p><s>gls一样的不加证明,大脑再次被干冒烟</s></p>
+<h4 id="热辐射">热辐射</h4>
+<p>任何物体都有热辐射</p>
+<p>电磁波的波长</p>
+<p>短 $\gamma$射线,$X$射线,紫外线,400nm,可见光,760nm,红外线,无线电 长</p>
+<p>想不出什么好的排版(</p>
+<p>$$E = h\nu$$</p>
+<p>$h$为普朗克常量,$\nu$为频率</p>
+<h4 id="黑体">黑体</h4>
+<p>反射率为$0$</p>
+<p>$1$为白体,$(0,1)$之间为灰体</p>
+<p>黑体辐射</p>
+<p>$$J = \sigma T^4$$</p>
+<p>$J$为单位面积的功率</p>
+<p>$\sigma = 5.67\times 10^{-8}W\cdot m^{-2}K^{-4}$为斯特番-玻尔兹曼常量</p>
+<h3 id="理想气体准稳态过程">理想气体准稳态过程</h3>
+<p>准稳态——压缩或膨胀过程中时刻平衡</p>
+<h4 id="等温过程">等温过程</h4>
+<p>$T$不变</p>
+<p>$$\Delta E = 0$$</p>
+<p>$$W = \int_{V_1}^{V_2}PdV = \int_{V_1}^{V_2}\frac{\nu RT}{V}dV = \nu RT \ln{\frac{V_2}{V_1}}$$</p>
+<p>$$Q = \Delta E + W = \nu RT \ln{\frac{V_2}{V_1}}$$</p>
+<h4 id="等压过程">等压过程</h4>
+<p>$$W = \int_{V_1}^{V_2}PdV = P(V_2 - V_1) = \nu R(T_2 - T_1)$$</p>
+<p>$$\Delta E = \frac{i}{2}\nu R(T_2 - T_1)$$</p>
+<p>$$Q = \frac{i+2}{2}\nu R(T_2 - T_1) $$</p>
+<h4 id="定容-等体-过程">定容(等体)过程</h4>
+<p>$$W = 0$$</p>
+<p>$$\Delta E =\frac{i}{2}P(V_2 - V_1) =  \frac{i}{2}\nu R(T_2 - T_1)$$</p>
+<p>$$Q = \Delta E + W = \frac{i}{2}P(V_2 - V_1) =  \frac{i}{2}\nu R(T_2 - T_1)$$</p>
+<h4 id="插播小知识">插播小知识</h4>
+<h5 id="热容">热容</h5>
+<p>$$C = \frac{\Delta Q}{\Delta T}$$</p>
+<h5 id="比热容">比热容</h5>
+<p>$$c = \frac{C}{m} = \frac{\Delta Q}{m\Delta T}$$</p>
+<h5 id="摩尔热容">摩尔热容</h5>
+<p>定义:$1mol$物质升降$1K$吸放热</p>
+<p>等体:$c_{V,m} = \frac{1}{\nu}(\frac{dQ}{dT})_V =  \frac{1}{\nu}\frac{dE}{dT} = \frac{i}{2}R$</p>
+<p>等压:$c_{P,m} = \frac{1}{\nu}(\frac{dQ}{dT})_P = \frac{1}{\nu}\frac{i+2}{2}\nu R = \frac{i+2}{2}R$</p>
+<p>不难得到 <strong>迈耶公式</strong></p>
+<p>$$\boxed{c_{P,m}-c_{V,m} = R}$$</p>
+<h5 id="比热比-绝热系数">比热比/绝热系数</h5>
+<p>$$\gamma = \frac{c_{P,m}}{c_{V,m}} = \frac{i+2}{i}$$</p>
+<h4 id="绝热过程">绝热过程</h4>
+<p>$$Q = 0$$</p>
+<p>由理想气体状态方程,</p>
+<p>$$PV = \nu RT$$</p>
+<p>$$\boxed{PdV + VdP = \nu R dT}$$</p>
+<p>$$\boxed{dQ = dE + PdV = 0}$$</p>
+<p>10pm了,写不完了,想看具体过程找我看笔记吧,明天补齐(</p>
+<p>最终计算得,</p>
+<p>$$d(PV^{\gamma}) = 0$$</p>
+<p>即</p>
+<p>$$PV^{\gamma} = const$$</p>
+<p>亦可推出(使用理想气体状态方程</p>
+<p>$$TV^{\gamma-1} = const$$</p>
+<p>$$P^{1-\gamma}T^{\gamma} = const$$</p>
+<h4 id="多方过程">多方过程</h4>
+<p>$$PV^n = const$$</p>
+<p>$$n = \gamma \Rightarrow 绝热$$</p>
+<p>$$n = 1 \Rightarrow 等温$$</p>
+<p>$$n = 0 \Rightarrow 等压$$</p>
+<p>$$n = \infty \Rightarrow 等容$$</p>
+<h4 id="绝热自由膨胀">绝热自由膨胀</h4>
+<p>$$Q=0$$</p>
+<p>$$W = 0$$</p>
+<p>$$\Delta E = 0$$</p>
+<p>写完了!!!</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1719,99 +1995,6 @@ $$v = \frac{m}{\rho_水} = \frac{0.9g}{1.0\times 10^3kg/m^3} = 0.9cm^3$$</p>
 <h4 id="面积-与-x-y-轴所在平面平行">面积(与$x,y$轴所在平面平行)</h4>
 <p>$S^{'} = \frac{\sqrt{2}}{4}S$</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://kyoukawa.github.io/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/bilibili-download-1080p/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://kyoukawa.github.io/icon.png">
-      <meta itemprop="name" content="kyoukawa">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="姜川的博客">
-      <meta itemprop="description" content="灌水,也可能掺杂些许知识">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 姜川的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/bilibili-download-1080p/" class="post-title-link" itemprop="url">bilibili-download-1080p</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-01-16 21:38:51" itemprop="dateCreated datePublished" datetime="2023-01-16T21:38:51+08:00">2023-01-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-12 19:36:37" itemprop="dateModified" datetime="2023-09-12T19:36:37+08:00">2023-09-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%97%A7%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%90/" itemprop="url" rel="index"><span itemprop="name">旧博客搬运</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>由于b站sb的操作,现在不加配置的话,利用各种下载器都只能下载480p的视频:(</p>
-<p>今天在v2ex看到了解决方案</p>
-<ul>
-<li>首先安装yt-dlp(早就有)</li>
-<li>在浏览器登录b站(用来搞到cookie)</li>
-<li>然后在下载时加上 <code>--cookies-from-browser chrome</code>(自行更改浏览器名称)</li>
-</ul>
-<h1>示例</h1>
-<p>就拿经典名作igotsmoke举例子吧</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yt-dlp --cookies-from-browser chrome https://www.bilibili.com/video/BV1v44y1o7Qs/</span><br></pre></td></tr></table></figure>
       
     </div>
 
