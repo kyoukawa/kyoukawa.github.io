@@ -6,7 +6,7 @@
   <link href="http://kyoukawa.github.io/atom.xml" rel="self"/>
   
   <link href="http://kyoukawa.github.io/"/>
-  <updated>2024-04-17T12:44:54.274Z</updated>
+  <updated>2024-04-20T15:22:34.952Z</updated>
   <id>http://kyoukawa.github.io/</id>
   
   <author>
@@ -17,17 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>旧文另一形式的再放送</title>
+    <link href="http://kyoukawa.github.io/20240420zyh/"/>
+    <id>http://kyoukawa.github.io/20240420zyh/</id>
+    <published>2024-04-20T15:14:39.000Z</published>
+    <updated>2024-04-20T15:22:34.952Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;版权声明:本文作者 22 班周裕航，未经作者允许严禁转载。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="学术" scheme="http://kyoukawa.github.io/tags/%E5%AD%A6%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>行路难</title>
     <link href="http://kyoukawa.github.io/20240417zzh/"/>
     <id>http://kyoukawa.github.io/20240417zzh/</id>
     <published>2024-04-17T12:26:50.000Z</published>
-    <updated>2024-04-17T12:44:54.274Z</updated>
+    <updated>2024-04-20T15:22:38.314Z</updated>
     
     
     <summary type="html">&lt;p&gt;版权声明:本文作者 22 班张子昊，未经作者允许严禁转载。&lt;/p&gt;</summary>
     
     
     
+    
+    <category term="文学" scheme="http://kyoukawa.github.io/tags/%E6%96%87%E5%AD%A6/"/>
     
   </entry>
   
@@ -36,7 +55,7 @@
     <link href="http://kyoukawa.github.io/20240416yxy/"/>
     <id>http://kyoukawa.github.io/20240416yxy/</id>
     <published>2024-04-16T13:24:20.000Z</published>
-    <updated>2024-04-16T13:25:15.122Z</updated>
+    <updated>2024-04-20T15:22:44.542Z</updated>
     
     
       
@@ -53,8 +72,6 @@
     
     
     <category term="闲话" scheme="http://kyoukawa.github.io/tags/%E9%97%B2%E8%AF%9D/"/>
-    
-    <category term="投稿" scheme="http://kyoukawa.github.io/tags/%E6%8A%95%E7%A8%BF/"/>
     
   </entry>
   
