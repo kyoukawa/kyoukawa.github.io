@@ -6,7 +6,7 @@
   <link href="http://kyoukawa.github.io/atom.xml" rel="self"/>
   
   <link href="http://kyoukawa.github.io/"/>
-  <updated>2024-04-22T13:55:37.144Z</updated>
+  <updated>2024-04-26T12:21:49.012Z</updated>
   <id>http://kyoukawa.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>莫比乌斯函数</title>
+    <link href="http://kyoukawa.github.io/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%87%BD%E6%95%B0/"/>
+    <id>http://kyoukawa.github.io/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%87%BD%E6%95%B0/</id>
+    <published>2024-04-25T16:00:00.000Z</published>
+    <updated>2024-04-26T12:21:49.012Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;版权声明:本文作者 22 班周裕杭，未经作者允许严禁转载。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="学术" scheme="http://kyoukawa.github.io/tags/%E5%AD%A6%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>20240422yxy投稿</title>
