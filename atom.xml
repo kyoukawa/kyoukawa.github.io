@@ -6,7 +6,7 @@
   <link href="http://kyoukawa.github.io/atom.xml" rel="self"/>
   
   <link href="http://kyoukawa.github.io/"/>
-  <updated>2024-04-26T12:42:31.270Z</updated>
+  <updated>2024-04-29T22:33:22.636Z</updated>
   <id>http://kyoukawa.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>趣闻</title>
+    <link href="http://kyoukawa.github.io/%E8%B6%A3%E9%97%BB/"/>
+    <id>http://kyoukawa.github.io/%E8%B6%A3%E9%97%BB/</id>
+    <published>2024-04-28T16:00:00.000Z</published>
+    <updated>2024-04-29T22:33:22.636Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;版权声明:本文作者 22 班王维祯，未经作者允许严禁转载。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="闲话" scheme="http://kyoukawa.github.io/tags/%E9%97%B2%E8%AF%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>莫比乌斯函数</title>
