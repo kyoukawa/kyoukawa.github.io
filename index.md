@@ -1,0 +1,1 @@
+<https://generals.io/games/wsz>
