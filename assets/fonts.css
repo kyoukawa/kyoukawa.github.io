@@ -1,0 +1,35 @@
+/* 自托管衬线体：Newsreader（可变字体，SIL OFL 1.1）
+   来源 Google Fonts，v26 latin / latin-ext 子集。
+   只覆盖拉丁字母、数字与常用标点；中文由系统宋体接管（见 --serif 的回退链）。
+   为什么不外链：GitHub Pages 在国内直连 fonts.gstatic.com 常被墙，自托管才稳。 */
+
+@font-face{
+  font-family:'Newsreader';
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+  src:url('fonts/newsreader-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face{
+  font-family:'Newsreader';
+  font-style:italic;
+  font-weight:400 700;
+  font-display:swap;
+  src:url('fonts/newsreader-latin-ext.woff2') format('woff2');
+  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+/* 衬线字体栈：
+   1. Newsreader —— 自托管，拉丁/数字
+   2. 中文宋体系 —— 标题里的汉字走这几档；顺序按 macOS → Windows → Linux
+   Claude 原版用的是商用 Tiempos，Newsreader 是同属过渡体、气质最接近的开源替代。 */
+:root{
+  --serif:'Newsreader',"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC",
+    "Noto Serif SC","SimSun",Georgia,serif;
+}
