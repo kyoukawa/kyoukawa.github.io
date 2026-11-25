@@ -119,6 +119,38 @@
   }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
+
+  /* 读书进度：数据从知识库站实时拉取，不写死在页面里 */
+  .read-head {
+    display: flex; flex-wrap: wrap; gap: .45rem .95rem;
+    font-size: .85rem; color: var(--muted); margin-bottom: 1rem;
+  }
+  .read-head b { color: var(--fg); font-weight: 600; }
+  .book { padding: .85rem 0; border-bottom: 1px solid var(--border); }
+  .book:last-child { border-bottom: none; }
+  .book-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 1rem; margin-bottom: .4rem;
+  }
+  .book-title { font-size: .95rem; color: var(--fg); font-weight: 500; }
+  .book-meta {
+    font-size: .75rem; color: var(--muted); font-family: var(--mono);
+    white-space: nowrap;
+  }
+  .book-sub { font-size: .78rem; color: var(--muted); margin-bottom: .45rem; }
+  .track { height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; }
+  .track > i {
+    display: block; height: 100%; border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+  }
+  .read-done { font-size: .82rem; color: var(--muted); margin-top: 1rem; }
+  .read-done b { color: var(--accent2); font-weight: 600; }
+  .read-foot {
+    margin: 1.2rem 0 0; padding-top: .9rem;
+    border-top: 1px solid var(--border);
+    font-size: .78rem; color: var(--muted);
+  }
+  .read-loading { font-size: .88rem; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -127,7 +159,7 @@
   <header>
     <h1>川</h1>
     <p class="tagline">
-      iOS 上的 Agent 折腾者。<br>
+      iOS 上的 Agent 折腾者，高三。<br>
       把重复劳动交给机器，把注意力留给难的部分。
     </p>
     <div class="meta">
@@ -135,17 +167,24 @@
       <span>Python</span>
       <span>Obsidian</span>
       <span>多 Agent 系统</span>
+      <span>高三</span>
     </div>
   </header>
 
-  <h2>两个项目</h2>
+  <h2>三个入口</h2>
   <div class="grid">
-
     <a class="card" href="https://github.com/kyoukawa/agent-system">
       <span class="role">框架 · 决定谁干活</span>
       <h3>agent-system</h3>
       <p>多 Agent 路由系统。Router 只分派不上手，Worker 隔离并发执行，状态持久化，Watchdog 兜底自愈。</p>
       <div class="tags"><i>路由</i><i>并发</i><i>自愈</i></div>
+    </a>
+
+    <a class="card" href="https://kyoukawa.github.io/vault-backup/">
+      <span class="role">知识库 · 决定记住什么</span>
+      <h3>vault-backup</h3>
+      <p>Obsidian 知识库的网页镜像：试卷库、作文语料、错题本、学业档案，还有每天自动同步的读书进度。</p>
+      <div class="tags"><i>Obsidian</i><i>GitHub Pages</i><i>自动同步</i></div>
     </a>
 
     <a class="card" href="https://github.com/kyoukawa/reading-collector">
@@ -178,11 +217,18 @@
     </p>
   </div>
 
+  <h2>最近在读</h2>
+  <div class="diagram" id="read-box">
+    <p class="read-loading">正在从知识库拉取…</p>
+  </div>
+  <p class="read-foot" id="read-foot" hidden></p>
+
   <h2>在做什么</h2>
   <ul class="plain">
     <li><b>多 Agent 架构</b> —— 六个独立技能改造成双层路由：Router 分派，Worker 隔离执行</li>
     <li><b>本地优先</b> —— 视频转写用系统语音识别，不花钱、不排队、不限次</li>
     <li><b>知识沉淀</b> —— 阅读笔记、作文语料库，长期维护在同一套结构里</li>
+    <li><b>读书追踪</b> —— 微信读书进度每天同步进 Obsidian，本页直接读那份数据，不重复维护</li>
   </ul>
 
   <h2>技术偏好</h2>
@@ -197,10 +243,81 @@
     <span>© 2026 川</span>
     <span>
       <a href="https://github.com/kyoukawa">GitHub</a> ·
+      <a href="https://kyoukawa.github.io/vault-backup/">知识库</a> ·
       <a href="https://github.com/kyoukawa/agent-system/blob/master/docs/ARCHITECTURE.md">架构说明</a>
     </span>
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var DATA_URL = 'https://kyoukawa.github.io/vault-backup/assets/weread.json';
+  var box = document.getElementById('read-box');
+  var foot = document.getElementById('read-foot');
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function dur(m) {
+    m = Math.max(0, Math.round(m || 0));
+    if (!m) return '0 分';
+    var h = Math.floor(m / 60), r = m % 60;
+    return h ? (h + ' 小时' + (r ? ' ' + r + ' 分' : '')) : (r + ' 分');
+  }
+
+  fetch(DATA_URL + '?v=' + Date.now())
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (d) {
+      var c = d.counts || {}, t = d.time || {};
+      var head = '<div class="read-head">'
+        + '<span>书架 <b>' + (d.shelf || 0) + '</b> 本</span>'
+        + '<span>在读 <b>' + (c.reading || 0) + '</b></span>'
+        + '<span>读完 <b>' + (c.done || 0) + '</b></span>'
+        + '<span>本周 <b>' + dur(t.week) + '</b>（' + (t.weekDays || 0) + ' 天）</span>'
+        + '<span>累计 <b>' + dur(t.all) + '</b></span>'
+        + '</div>';
+
+      var books = (d.reading || []).slice(0, 5).map(function (b) {
+        var pct = Math.max(0, Math.min(100, b.progress || 0));
+        var pos = [];
+        if (b.chapter && b.chapters) pos.push(b.chapter + '/' + b.chapters + ' 章');
+        if (b.chapterName) pos.push(b.chapterName);
+        var meta = [];
+        if (b.minutes) meta.push(dur(b.minutes));
+        if (b.delta > 0) meta.push('+' + dur(b.delta));
+        return '<div class="book">'
+          + '<div class="book-top">'
+          + '<span class="book-title">' + esc(b.title) + '</span>'
+          + '<span class="book-meta">' + pct + '%</span>'
+          + '</div>'
+          + '<div class="book-sub">' + esc(b.author || '')
+          + (pos.length ? ' · ' + esc(pos.join(' · ')) : '')
+          + (meta.length ? ' · ' + esc(meta.join(' · ')) : '') + '</div>'
+          + '<div class="track"><i style="width:' + pct + '%"></i></div>'
+          + '</div>';
+      }).join('');
+
+      var done = (d.done || []).map(function (b) {
+        return '<b>' + esc(b.title) + '</b>'
+          + (b.minutes ? '（' + dur(b.minutes) + '）' : '');
+      }).join('、');
+
+      box.innerHTML = head + (books || '<p class="read-loading">暂时没有在读的书。</p>')
+        + (done ? '<p class="read-done">已读完：' + done + '</p>' : '');
+
+      foot.hidden = false;
+      foot.innerHTML = '数据更新于 ' + esc(d.updated)
+        + ' · 在 <a href="https://kyoukawa.github.io/vault-backup/view.html?file=reading-progress">知识库</a>'
+        + ' 里自动同步，源是微信读书';
+    })
+    .catch(function (e) {
+      box.innerHTML = '<p class="read-loading">读书数据没拉取到（' + esc(e.message) + '）。'
+        + '可以直接 <a href="https://kyoukawa.github.io/vault-backup/view.html?file=reading-progress">打开知识库</a>。</p>';
+    });
+})();
+</script>
 </body>
 </html>
