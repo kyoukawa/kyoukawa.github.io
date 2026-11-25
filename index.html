@@ -217,7 +217,7 @@
       <div class="tags"><i>路由</i><i>并发</i><i>自愈</i></div>
     </a>
 
-    <a class="card" href="https://kyoukawa.github.io/vault-backup/">
+    <a class="card" href="https://kb.is-a.dev/">
       <span class="role">知识库 · 决定记住什么</span>
       <h3>vault-backup</h3>
       <p>Obsidian 知识库的网页镜像：试卷库、作文语料、错题本、学业档案，还有每天自动同步的读书进度。</p>
@@ -280,7 +280,7 @@
     <span>© 2026 川</span>
     <span>
       <a href="https://github.com/kyoukawa">GitHub</a> ·
-      <a href="https://kyoukawa.github.io/vault-backup/">知识库</a> ·
+      <a href="https://kb.is-a.dev/">知识库</a> ·
       <a href="https://github.com/kyoukawa/agent-system/blob/master/docs/ARCHITECTURE.md">架构说明</a>
     </span>
   </footer>
@@ -289,9 +289,23 @@
 
 <script>
 (function () {
-  var DATA_URL = 'https://kyoukawa.github.io/vault-backup/assets/weread.json';
+  // 知识库数据源：优先自定义域名，失败回退 github.io。
+  // 换域名的过渡期两边都能用，不用等 DNS 生效。
+  var DATA_URLS = [
+    'https://kb.is-a.dev/assets/weread.json',
+    'https://kyoukawa.github.io/vault-backup/assets/weread.json'
+  ];
   var box = document.getElementById('read-box');
   var foot = document.getElementById('read-foot');
+
+  // 依次尝试，第一个成功的返回
+  function fetchJSON(urls, i) {
+    i = i || 0;
+    if (i >= urls.length) return Promise.reject(new Error('全部数据源都不可用'));
+    return fetch(urls[i] + '?v=' + Date.now())
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .catch(function () { return fetchJSON(urls, i + 1); });
+  }
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
@@ -305,8 +319,7 @@
     return h ? (h + ' 小时' + (r ? ' ' + r + ' 分' : '')) : (r + ' 分');
   }
 
-  fetch(DATA_URL + '?v=' + Date.now())
-    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  fetchJSON(DATA_URLS)
     .then(function (d) {
       var c = d.counts || {}, t = d.time || {};
       var head = '<div class="read-head">'
@@ -347,12 +360,12 @@
 
       foot.hidden = false;
       foot.innerHTML = '数据更新于 ' + esc(d.updated)
-        + ' · 在 <a href="https://kyoukawa.github.io/vault-backup/view.html?file=reading-progress">知识库</a>'
+        + ' · 在 <a href="https://kb.is-a.dev/view.html?file=reading-progress">知识库</a>'
         + ' 里自动同步，源是微信读书';
     })
     .catch(function (e) {
       box.innerHTML = '<p class="read-loading">读书数据没拉取到（' + esc(e.message) + '）。'
-        + '可以直接 <a href="https://kyoukawa.github.io/vault-backup/view.html?file=reading-progress">打开知识库</a>。</p>';
+        + '可以直接 <a href="https://kb.is-a.dev/view.html?file=reading-progress">打开知识库</a>。</p>';
     });
 })();
 </script>
