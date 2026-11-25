@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>川 · Agent 折腾者</title>
-<meta name="description" content="iOS 上的 Agent 折腾者。多 Agent 系统与本地优先的知识收集流水线。">
+<title>川 · 导航</title>
+<meta name="description" content="个人导航页：知识库、每日一题、项目与工具入口。">
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
-  /* Claude / Anthropic palette: warm parchment, terracotta, warm-only neutrals */
-    /* 标题书法体（Ma Shan Zheng, OFL）；只用于 h1 中文，拉丁走 Newsreader */
+  /* 标题书法体（Ma Shan Zheng, OFL）；只用于 h1 中文，拉丁走 Newsreader */
   @font-face {
     font-family: 'Title Brush';
     font-style: normal;
@@ -18,9 +17,11 @@
     unicode-range: U+2E80-2FDF, U+3000-303F, U+3400-4DBF, U+4E00-9FFF,
       U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
   }
-:root {
+  /* Claude / Anthropic palette: warm parchment, terracotta, warm-only neutrals */
+  :root {
     --bg: #141413;          /* Deep Dark */
     --panel: #1c1b19;
+    --panel-2: #232221;
     --border: #30302e;      /* Dark Surface */
     --border-soft: #262624;
     --text: #faf9f5;        /* Ivory */
@@ -36,6 +37,7 @@
     :root {
       --bg: #f5f4ed;        /* Parchment */
       --panel: #faf9f5;     /* Ivory */
+      --panel-2: #f0eee6;
       --border: #e8e6dc;    /* Border Warm */
       --border-soft: #f0eee6;
       --text: #141413;      /* Near Black */
@@ -47,147 +49,110 @@
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0; padding: 3.5rem 1.25rem 5rem;
+    margin: 0; padding: 3rem 1.25rem 4rem;
     background: var(--bg); color: var(--text);
     font: 16.5px/1.68 -apple-system, BlinkMacSystemFont, "SF Pro Text",
           "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   }
-  .wrap { max-width: 720px; margin: 0 auto; }
+  .wrap { max-width: 760px; margin: 0 auto; }
 
-  header { margin-bottom: 3.5rem; }
+  /* ---------- 头部：一行身份 + 书法名 ---------- */
+  header { margin-bottom: 2.6rem; }
   h1 {
     font-family: 'Newsreader', 'Title Brush', var(--serif);
-    font-size: 2.6rem; font-weight: 500; margin: 0 0 .6rem;
-    letter-spacing: -.015em; line-height: 1.15;
+    font-size: 2.6rem; font-weight: 400; margin: 0 0 .5rem;
+    letter-spacing: .01em; line-height: 1.15;
   }
-  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.4rem; line-height: 1.65; }
-  .meta { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .82rem; }
-  .meta span {
-    padding: .22rem .7rem; border: 1px solid var(--border);
-    border-radius: 999px; color: var(--muted); background: var(--panel);
-  }
+  .tagline { color: var(--muted); font-size: .98rem; margin: 0; line-height: 1.6; }
 
+  /* ---------- 店铺导航：两组主入口 ---------- */
   h2 {
     font-family: var(--serif);
-    font-size: 1.35rem; font-weight: 500; margin: 3.4rem 0 1.3rem;
-    color: var(--text); letter-spacing: -.01em; text-transform: none;
+    font-size: 1.2rem; font-weight: 500; margin: 2.8rem 0 1rem;
+    color: var(--text); letter-spacing: -.01em;
   }
   h2::after {
-    content: ""; display: block; width: 2.25rem; height: 2px;
-    margin-top: .7rem; background: var(--accent); opacity: .6; border-radius: 2px;
+    content: ""; display: block; width: 2rem; height: 2px;
+    margin-top: .6rem; background: var(--accent); opacity: .6; border-radius: 2px;
   }
 
-  .grid { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
-  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  /* 主入口：大块、带图标位、一眼能找到 */
+  .hero-grid {
+    display: grid; gap: .8rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 620px) { .hero-grid { grid-template-columns: 1fr; } }
 
-  .card {
-    display: block; padding: 1.4rem;
-    background: var(--panel); border: 1px solid var(--border);
-    border-radius: 12px; text-decoration: none; color: inherit;
-    transition: border-color .18s, transform .18s;
+  .hero {
+    display: block; padding: 1.15rem 1.25rem; text-decoration: none;
+    color: inherit; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; transition: border-color .16s, transform .16s, background .16s;
   }
-  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .card h3 {
-    margin: 0 0 .35rem; font-size: 1.12rem; color: var(--text);
-    font-family: var(--serif); font-weight: 500;
+  .hero:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .hero .kicker {
+    font-family: var(--mono); font-size: .7rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--accent); display: block;
+    margin-bottom: .35rem;
   }
-  .card .role {
-    font-size: .76rem; color: var(--accent); font-family: var(--mono);
-    margin-bottom: .6rem; display: block; letter-spacing: .02em;
+  .hero .name {
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
+    color: var(--text); display: block; margin-bottom: .25rem;
   }
-  .card p { margin: 0 0 .9rem; font-size: .92rem; color: var(--muted); line-height: 1.62; }
-  .tags { display: flex; flex-wrap: wrap; gap: .35rem; }
-  .tags i {
-    font-style: normal; font-size: .72rem; font-family: var(--mono);
-    padding: .12rem .45rem; border-radius: 4px;
-    background: var(--bg); border: 1px solid var(--border); color: var(--muted);
-  }
-
-  .diagram {
-    background: var(--panel); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.6rem 1.2rem; text-align: center;
-  }
-  .d-row, .d-workers, .d-arrow { margin: 0; }
-  .d-arrow { color: var(--muted); font-size: .95rem; line-height: 2.2; }
-  .d-arrow small { font-size: .72rem; font-family: var(--mono); }
-  .pill {
-    display: inline-block; padding: .35rem 1rem; border-radius: 999px;
-    border: 1px solid var(--border); font-size: .9rem;
-  }
-  .d-box {
-    display: inline-flex; flex-direction: column; gap: .15rem;
-    padding: .75rem 1.6rem; border: 1px solid var(--accent);
-    border-radius: 10px; background: var(--bg);
-  }
-  .d-box b { color: var(--accent); font-size: .98rem; }
-  .d-box span { font-size: .75rem; color: var(--muted); }
-  .d-box.sub { border-color: var(--accent2); }
-  .d-box.sub b { color: var(--accent2); }
-  .d-workers { display: flex; justify-content: center; gap: .5rem; flex-wrap: wrap; }
-  .d-workers span {
-    padding: .3rem .7rem; border-radius: 6px; font-size: .8rem;
-    background: var(--bg); border: 1px solid var(--border); color: var(--muted);
-  }
-  .d-note {
-    margin: 1.4rem 0 0; padding-top: 1.1rem;
-    border-top: 1px solid var(--border);
-    font-size: .82rem; color: var(--muted); line-height: 1.7;
+  .hero .desc { font-size: .86rem; color: var(--muted); line-height: 1.55; display: block; }
+  .hero .host {
+    font-family: var(--mono); font-size: .72rem; color: var(--dim);
+    display: block; margin-top: .55rem;
   }
 
-  ul.plain { list-style: none; padding: 0; margin: 0; }
-  ul.plain li {
-    padding: .7rem 0; border-bottom: 1px solid var(--border);
-    font-size: .94rem;
+  /* 次级入口：紧凑清单 */
+  .linklist { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--panel); }
+  .linklist a {
+    display: flex; align-items: baseline; gap: .7rem;
+    padding: .8rem 1.1rem; text-decoration: none; color: inherit;
+    border-bottom: 1px solid var(--border-soft);
+    transition: background .14s;
   }
-  ul.plain li:last-child { border-bottom: none; }
-  ul.plain b { color: var(--accent); font-weight: 600; }
+  .linklist a:last-child { border-bottom: 0; }
+  .linklist a:hover { background: var(--panel-2); }
+  .linklist .t { font-size: .95rem; color: var(--text); flex: 0 0 auto; font-weight: 500; }
+  .linklist .d { font-size: .82rem; color: var(--dim); flex: 1 1 auto; }
+  .linklist .ext { font-family: var(--mono); font-size: .72rem; color: var(--dim); flex: 0 0 auto; }
 
+  /* ---------- 读书：压缩成一行摘要 + 展开 ---------- */
+  .reading {
+    margin-top: 1rem; padding: 1rem 1.15rem; background: var(--panel);
+    border: 1px solid var(--border); border-radius: 12px; font-size: .9rem;
+  }
+  .reading .sum { color: var(--muted); }
+  .reading .sum b { color: var(--text); font-weight: 600; }
+  .reading details { margin-top: .55rem; }
+  .reading details + details { margin-top: .35rem; }
+  .reading summary {
+    cursor: pointer; color: var(--accent); font-size: .84rem; user-select: none;
+    list-style: none; padding: .15rem 0;
+  }
+  .reading summary::-webkit-details-marker { display: none; }
+  .reading summary::before { content: "› "; display: inline-block; transition: transform .15s; }
+  .reading details[open] > summary::before { transform: rotate(90deg); }
+  .reading details[open] > summary { margin-bottom: .35rem; }
+  .bk { display: flex; justify-content: space-between; gap: .8rem; padding: .45rem 0;
+        border-bottom: 1px solid var(--border-soft); font-size: .86rem; }
+  .bk:last-child { border-bottom: 0; }
+  .bk .n { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bk .p { font-family: var(--mono); font-size: .78rem; color: var(--dim); flex: 0 0 auto; }
+
+  /* ---------- 页脚 ---------- */
   footer {
-    margin-top: 4.5rem; padding-top: 1.5rem;
+    margin-top: 4rem; padding-top: 1.4rem;
     border-top: 1px solid var(--border-soft);
-    font-size: .82rem; color: var(--dim);
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem;
+    font-size: .8rem; color: var(--dim);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: .6rem;
   }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  code {
-    font-family: var(--mono); font-size: .86em;
-    background: var(--panel); border: 1px solid var(--border);
-    border-radius: 5px; padding: .1em .38em;
-  }
-
-  /* 读书进度：数据从知识库站实时拉取，不写死在页面里 */
-  .read-head {
-    display: flex; flex-wrap: wrap; gap: .45rem .95rem;
-    font-size: .85rem; color: var(--muted); margin-bottom: 1rem;
-  }
-  .read-head b { color: var(--text); font-weight: 600; }
-  .book { padding: .9rem 0; border-bottom: 1px solid var(--border-soft); }
-  .book:last-child { border-bottom: none; }
-  .book-top {
-    display: flex; justify-content: space-between; align-items: baseline;
-    gap: 1rem; margin-bottom: .4rem;
-  }
-  .book-title { font-size: .95rem; color: var(--text); font-weight: 500; }
-  .book-meta {
-    font-size: .74rem; color: var(--muted); font-family: var(--mono);
-    white-space: nowrap; font-variant-numeric: tabular-nums;
-  }
-  .book-sub { font-size: .78rem; color: var(--dim); margin-bottom: .5rem; }
-  .track { height: 4px; border-radius: 2px; background: var(--border); overflow: hidden; }
-  .track > i {
-    display: block; height: 100%; border-radius: 2px;
-    background: var(--accent);
-  }
-  .read-done { font-size: .82rem; color: var(--muted); margin-top: 1.1rem; }
-  .read-done b { color: var(--accent2); font-weight: 600; }
-  .read-foot {
-    margin: 1.3rem 0 0; padding-top: .9rem;
-    border-top: 1px solid var(--border-soft);
-    font-size: .76rem; color: var(--dim);
-  }
-  .read-loading { font-size: .88rem; color: var(--muted); }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -195,93 +160,100 @@
 
   <header>
     <h1>川</h1>
-    <p class="tagline">
-      iOS 上的 Agent 折腾者，高三。<br>
-      把重复劳动交给机器，把注意力留给难的部分。
-    </p>
-    <div class="meta">
-      <span>北京</span>
-      <span>Python</span>
-      <span>Obsidian</span>
-      <span>多 Agent 系统</span>
-      <span>高三</span>
-    </div>
+    <p class="tagline">高三 · 北京。把重复劳动交给机器。</p>
   </header>
 
-  <h2>三个入口</h2>
-  <div class="grid">
-    <a class="card" href="https://github.com/kyoukawa/agent-system">
-      <span class="role">框架 · 决定谁干活</span>
-      <h3>agent-system</h3>
-      <p>多 Agent 路由系统。Router 只分派不上手，Worker 隔离并发执行，状态持久化，Watchdog 兜底自愈。</p>
-      <div class="tags"><i>路由</i><i>并发</i><i>自愈</i></div>
+  <h2>知识库</h2>
+  <div class="hero-grid">
+    <a class="hero" href="https://kb.is-a.dev/">
+      <span class="kicker">仪表盘</span>
+      <span class="name">看板</span>
+      <span class="desc">读书记录、每日题目、试卷数字化进度，一页看完</span>
+      <span class="host">kb.is-a.dev/dashboard</span>
     </a>
-
-    <a class="card" href="https://kb.is-a.dev/">
-      <span class="role">知识库 · 决定记住什么</span>
-      <h3>vault-backup</h3>
-      <p>Obsidian 知识库的网页镜像：试卷库、作文语料、错题本、学业档案，还有每天自动同步的读书进度。</p>
-      <div class="tags"><i>Obsidian</i><i>GitHub Pages</i><i>自动同步</i></div>
+    <a class="hero" href="https://kb.is-a.dev/latest.html">
+      <span class="kicker">每日</span>
+      <span class="name">今天四道题</span>
+      <span class="desc">语文红楼梦 ×2 + 化学 ×2，先做后看答案</span>
+      <span class="host">kb.is-a.dev/latest</span>
     </a>
-
-    <a class="card" href="https://github.com/kyoukawa/reading-collector">
-      <span class="role">插件 · 决定活怎么干</span>
-      <h3>reading-collector</h3>
-      <p>待办里的链接 → 清洗正文 → Obsidian 笔记 → 勾完成。视频走本地语音识别，零 API key。</p>
-      <div class="tags"><i>Obsidian</i><i>本地转写</i><i>零额度</i></div>
+    <a class="hero" href="https://kb.is-a.dev/view.html?file=exam-index">
+      <span class="kicker">刷题</span>
+      <span class="name">试卷库</span>
+      <span class="desc">428 份北京各区一模/二模/期末教师版原卷，含答案</span>
+      <span class="host">kb.is-a.dev/exam</span>
     </a>
-
+    <a class="hero" href="https://kb.is-a.dev/view.html?file=chinese-index">
+      <span class="kicker">作文</span>
+      <span class="name">语文语料库</span>
+      <span class="desc">六维判据、四题七稿、范文拆解、时文素材</span>
+      <span class="host">kb.is-a.dev/chinese</span>
+    </a>
   </div>
 
-  <h2>它们怎么配合</h2>
-  <div class="diagram">
-    <div class="d-row"><span class="pill user">你说一句话</span></div>
-    <div class="d-arrow">↓</div>
-    <div class="d-box">
-      <b>agent-system</b><span>判断该谁干活</span>
-    </div>
-    <div class="d-arrow">↓ <small>读 workers/*.json</small></div>
-    <div class="d-workers">
-      <span>收集</span><span>视频</span><span>GitHub</span><span>语料库</span>
-    </div>
-    <div class="d-arrow">↓</div>
-    <div class="d-box sub">
-      <b>reading-collector</b><span>业务实现</span>
-    </div>
-    <p class="d-note">
-      连接点只有三处：触发词 / 手册路径 / 子代理指令。<br>
-      框架不 import 业务代码，业务不依赖框架。
-    </p>
+  <h2>更多入口</h2>
+  <div class="linklist">
+    <a href="https://kb.is-a.dev/">
+      <span class="t">知识库首页</span>
+      <span class="d">全部索引，按用途找</span>
+      <span class="ext">kb.is-a.dev</span>
+    </a>
+    <a href="https://kb.is-a.dev/view.html?file=english-index">
+      <span class="t">英语语料库</span>
+      <span class="d">What→How→Effect→Value，阅表题写作</span>
+      <span class="ext">kb</span>
+    </a>
+    <a href="https://kb.is-a.dev/view.html?file=study-log">
+      <span class="t">学习日志</span>
+      <span class="d">短板雷达 + 带学错题</span>
+      <span class="ext">kb</span>
+    </a>
+    <a href="https://kb.is-a.dev/view.html?file=reading-progress">
+      <span class="t">微信读书</span>
+      <span class="d">在读 / 读完 / 时长，脚本自动同步</span>
+      <span class="ext">kb</span>
+    </a>
+    <a href="https://kb.is-a.dev/writing-ocr.html">
+      <span class="t">写作经纬线（二）</span>
+      <span class="d">124 篇全文，可搜索</span>
+      <span class="ext">kb</span>
+    </a>
+    <a href="https://cli.is-a.dev/">
+      <span class="t">CloudCLI</span>
+      <span class="d">在手机/平板上开 Claude Code 会话</span>
+      <span class="ext">cli.is-a.dev</span>
+    </a>
   </div>
 
-  <h2>最近在读</h2>
-  <div class="diagram" id="read-box">
-    <p class="read-loading">正在从知识库拉取…</p>
+  <h2>正在读</h2>
+  <div class="reading" id="read-box">
+    <span class="sum">加载中…</span>
   </div>
-  <p class="read-foot" id="read-foot" hidden></p>
 
-  <h2>在做什么</h2>
-  <ul class="plain">
-    <li><b>多 Agent 架构</b> —— 六个独立技能改造成双层路由：Router 分派，Worker 隔离执行</li>
-    <li><b>本地优先</b> —— 视频转写用系统语音识别，不花钱、不排队、不限次</li>
-    <li><b>知识沉淀</b> —— 阅读笔记、作文语料库，长期维护在同一套结构里</li>
-    <li><b>读书追踪</b> —— 微信读书进度每天同步进 Obsidian，本页直接读那份数据，不重复维护</li>
-  </ul>
-
-  <h2>技术偏好</h2>
-  <ul class="plain">
-    <li><b>平台</b> —— iOS + iSH（Alpine / musl），没有 root 也没有 node_modules</li>
-    <li><b>依赖</b> —— 标准库优先，能 <code>apk add</code> 就不 <code>pip install</code></li>
-    <li><b>数据</b> —— 本地文件为权威，云端只做镜像</li>
-    <li><b>自动化</b> —— 手动触发优于定时任务：定时任务会静默失败</li>
-  </ul>
+  <h2>代码</h2>
+  <div class="linklist">
+    <a href="https://github.com/kyoukawa/agent-system">
+      <span class="t">agent-system</span>
+      <span class="d">多 Agent 路由：Router 分派，Worker 隔离执行</span>
+      <span class="ext">GitHub</span>
+    </a>
+    <a href="https://github.com/kyoukawa/reading-collector">
+      <span class="t">reading-collector</span>
+      <span class="d">链接 → 清洗 → Obsidian 笔记，本地转写零 key</span>
+      <span class="ext">GitHub</span>
+    </a>
+    <a href="https://github.com/kyoukawa/vault-backup">
+      <span class="t">vault-backup</span>
+      <span class="d">知识库本体，obsidian-git 自动同步</span>
+      <span class="ext">GitHub</span>
+    </a>
+  </div>
 
   <footer>
     <span>© 2026 川</span>
     <span>
       <a href="https://github.com/kyoukawa">GitHub</a> ·
-      <a href="https://kb.is-a.dev/">知识库</a> ·
-      <a href="https://github.com/kyoukawa/agent-system/blob/master/docs/ARCHITECTURE.md">架构说明</a>
+      <a href="https://kb.is-a.dev/">知识库</a>
     </span>
   </footer>
 
@@ -289,23 +261,12 @@
 
 <script>
 (function () {
-  // 知识库数据源：优先自定义域名，失败回退 github.io。
-  // 换域名的过渡期两边都能用，不用等 DNS 生效。
+  // 读书数据：优先 kb.is-a.dev，失败回退 github.io
   var DATA_URLS = [
     'https://kb.is-a.dev/assets/weread.json',
     'https://kyoukawa.github.io/vault-backup/assets/weread.json'
   ];
   var box = document.getElementById('read-box');
-  var foot = document.getElementById('read-foot');
-
-  // 依次尝试，第一个成功的返回
-  function fetchJSON(urls, i) {
-    i = i || 0;
-    if (i >= urls.length) return Promise.reject(new Error('全部数据源都不可用'));
-    return fetch(urls[i] + '?v=' + Date.now())
-      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .catch(function () { return fetchJSON(urls, i + 1); });
-  }
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
@@ -318,55 +279,36 @@
     var h = Math.floor(m / 60), r = m % 60;
     return h ? (h + ' 小时' + (r ? ' ' + r + ' 分' : '')) : (r + ' 分');
   }
+  function fetchJSON(urls, i) {
+    i = i || 0;
+    if (i >= urls.length) return Promise.reject(new Error('数据源不可用'));
+    return fetch(urls[i] + '?v=' + Date.now())
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .catch(function () { return fetchJSON(urls, i + 1); });
+  }
 
-  fetchJSON(DATA_URLS)
-    .then(function (d) {
-      var c = d.counts || {}, t = d.time || {};
-      var head = '<div class="read-head">'
-        + '<span>书架 <b>' + (d.shelf || 0) + '</b> 本</span>'
-        + '<span>在读 <b>' + (c.reading || 0) + '</b></span>'
-        + '<span>读完 <b>' + (c.done || 0) + '</b></span>'
-        + '<span>本周 <b>' + dur(t.week) + '</b>（' + (t.weekDays || 0) + ' 天）</span>'
-        + '<span>累计 <b>' + dur(t.all) + '</b></span>'
-        + '</div>';
+  fetchJSON(DATA_URLS).then(function (d) {
+    var c = d.counts || {}, t = d.time || {};
+    var books = (d.reading || []).slice(0, 4).map(function (b) {
+      var pct = Math.max(0, Math.min(100, b.progress || 0));
+      return '<div class="bk"><span class="n">' + esc(b.title) + '</span>'
+        + '<span class="p">' + pct + '%</span></div>';
+    }).join('');
 
-      var books = (d.reading || []).slice(0, 5).map(function (b) {
-        var pct = Math.max(0, Math.min(100, b.progress || 0));
-        var pos = [];
-        if (b.chapter && b.chapters) pos.push(b.chapter + '/' + b.chapters + ' 章');
-        if (b.chapterName) pos.push(b.chapterName);
-        var meta = [];
-        if (b.minutes) meta.push(dur(b.minutes));
-        if (b.delta > 0) meta.push('+' + dur(b.delta));
-        return '<div class="book">'
-          + '<div class="book-top">'
-          + '<span class="book-title">' + esc(b.title) + '</span>'
-          + '<span class="book-meta">' + pct + '%</span>'
-          + '</div>'
-          + '<div class="book-sub">' + esc(b.author || '')
-          + (pos.length ? ' · ' + esc(pos.join(' · ')) : '')
-          + (meta.length ? ' · ' + esc(meta.join(' · ')) : '') + '</div>'
-          + '<div class="track"><i style="width:' + pct + '%"></i></div>'
-          + '</div>';
-      }).join('');
-
-      var done = (d.done || []).map(function (b) {
-        return '<b>' + esc(b.title) + '</b>'
-          + (b.minutes ? '（' + dur(b.minutes) + '）' : '');
-      }).join('、');
-
-      box.innerHTML = head + (books || '<p class="read-loading">暂时没有在读的书。</p>')
-        + (done ? '<p class="read-done">已读完：' + done + '</p>' : '');
-
-      foot.hidden = false;
-      foot.innerHTML = '数据更新于 ' + esc(d.updated)
-        + ' · 在 <a href="https://kb.is-a.dev/view.html?file=reading-progress">知识库</a>'
-        + ' 里自动同步，源是微信读书';
-    })
-    .catch(function (e) {
-      box.innerHTML = '<p class="read-loading">读书数据没拉取到（' + esc(e.message) + '）。'
-        + '可以直接 <a href="https://kb.is-a.dev/view.html?file=reading-progress">打开知识库</a>。</p>';
-    });
+    box.innerHTML =
+      '<span class="sum">书架 <b>' + (d.shelf || 0) + '</b> 本 · 在读 <b>'
+      + (c.reading || 0) + '</b> · 读完 <b>' + (c.done || 0) + '</b> · 本周 <b>'
+      + dur(t.week) + '</b>（' + (t.weekDays || 0) + ' 天）</span>'
+      + (books ? '<details><summary>看具体书目</summary>' + books + '</details>' : '')
+      + '<details><summary>完整进度与变化日志</summary>'
+      + '<div class="bk"><span class="n"><a href="https://kb.is-a.dev/view.html?file=reading-progress">阅读进度</a></span>'
+      + '<span class="p">' + esc(d.updated || '') + '</span></div>'
+      + '<div class="bk"><span class="n"><a href="https://kb.is-a.dev/view.html?file=reading-log">阅读日志</a></span>'
+      + '<span class="p"></span></div></details>';
+  }).catch(function () {
+    box.innerHTML = '<span class="sum">读书数据没取到。'
+      + '<a href="https://kb.is-a.dev/view.html?file=reading-progress">直接打开阅读进度</a></span>';
+  });
 })();
 </script>
 </body>
