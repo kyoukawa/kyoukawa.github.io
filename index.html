@@ -6,47 +6,64 @@
 <title>川 · Agent 折腾者</title>
 <meta name="description" content="iOS 上的 Agent 折腾者。多 Agent 系统与本地优先的知识收集流水线。">
 <style>
+  /* Claude / Anthropic palette: warm parchment, terracotta, warm-only neutrals */
   :root {
-    --bg: #0d1117;
-    --panel: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --accent: #58a6ff;
-    --accent2: #3fb950;
+    --bg: #141413;          /* Deep Dark */
+    --panel: #1c1b19;
+    --border: #30302e;      /* Dark Surface */
+    --border-soft: #262624;
+    --text: #faf9f5;        /* Ivory */
+    --muted: #b0aea5;       /* Warm Silver */
+    --dim: #87867f;
+    --accent: #d97757;      /* Coral */
+    --accent2: #7fa889;     /* muted green */
+    --serif: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
     --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
   }
   @media (prefers-color-scheme: light) {
     :root {
-      --bg: #ffffff; --panel: #f6f8fa; --border: #d0d7de;
-      --text: #1f2328; --muted: #656d76; --accent: #0969da; --accent2: #1a7f37;
+      --bg: #f5f4ed;        /* Parchment */
+      --panel: #faf9f5;     /* Ivory */
+      --border: #e8e6dc;    /* Border Warm */
+      --border-soft: #f0eee6;
+      --text: #141413;      /* Near Black */
+      --muted: #5e5d59;     /* Olive Gray */
+      --dim: #87867f;
+      --accent: #c96442;    /* Terracotta */
+      --accent2: #4a7c59;
     }
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0; padding: 3rem 1.25rem 5rem;
+    margin: 0; padding: 3.5rem 1.25rem 5rem;
     background: var(--bg); color: var(--text);
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    font: 16.5px/1.68 -apple-system, BlinkMacSystemFont, "SF Pro Text",
           "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   }
   .wrap { max-width: 720px; margin: 0 auto; }
 
   header { margin-bottom: 3.5rem; }
   h1 {
-    font-size: 2.5rem; font-weight: 700; margin: 0 0 .5rem;
-    letter-spacing: -.02em; line-height: 1.15;
+    font-family: var(--serif);
+    font-size: 2.6rem; font-weight: 500; margin: 0 0 .6rem;
+    letter-spacing: -.015em; line-height: 1.15;
   }
-  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 1rem; }
-  .meta { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .85rem; }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.4rem; line-height: 1.65; }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .82rem; }
   .meta span {
-    padding: .2rem .6rem; border: 1px solid var(--border);
+    padding: .22rem .7rem; border: 1px solid var(--border);
     border-radius: 999px; color: var(--muted); background: var(--panel);
   }
 
   h2 {
-    font-size: 1.05rem; font-weight: 600; margin: 3rem 0 1.25rem;
-    color: var(--muted); letter-spacing: .06em; text-transform: uppercase;
+    font-family: var(--serif);
+    font-size: 1.35rem; font-weight: 500; margin: 3.4rem 0 1.3rem;
+    color: var(--text); letter-spacing: -.01em; text-transform: none;
+  }
+  h2::after {
+    content: ""; display: block; width: 2.25rem; height: 2px;
+    margin-top: .7rem; background: var(--accent); opacity: .6; border-radius: 2px;
   }
 
   .grid { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
@@ -59,12 +76,15 @@
     transition: border-color .18s, transform .18s;
   }
   .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .card h3 { margin: 0 0 .35rem; font-size: 1.1rem; color: var(--accent); }
-  .card .role {
-    font-size: .78rem; color: var(--accent2); font-family: var(--mono);
-    margin-bottom: .6rem; display: block;
+  .card h3 {
+    margin: 0 0 .35rem; font-size: 1.12rem; color: var(--text);
+    font-family: var(--serif); font-weight: 500;
   }
-  .card p { margin: 0 0 .9rem; font-size: .92rem; color: var(--muted); }
+  .card .role {
+    font-size: .76rem; color: var(--accent); font-family: var(--mono);
+    margin-bottom: .6rem; display: block; letter-spacing: .02em;
+  }
+  .card p { margin: 0 0 .9rem; font-size: .92rem; color: var(--muted); line-height: 1.62; }
   .tags { display: flex; flex-wrap: wrap; gap: .35rem; }
   .tags i {
     font-style: normal; font-size: .72rem; font-family: var(--mono);
@@ -112,43 +132,48 @@
   ul.plain b { color: var(--accent); font-weight: 600; }
 
   footer {
-    margin-top: 4rem; padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-    font-size: .85rem; color: var(--muted);
+    margin-top: 4.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border-soft);
+    font-size: .82rem; color: var(--dim);
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem;
   }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
+  code {
+    font-family: var(--mono); font-size: .86em;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 5px; padding: .1em .38em;
+  }
 
   /* 读书进度：数据从知识库站实时拉取，不写死在页面里 */
   .read-head {
     display: flex; flex-wrap: wrap; gap: .45rem .95rem;
     font-size: .85rem; color: var(--muted); margin-bottom: 1rem;
   }
-  .read-head b { color: var(--fg); font-weight: 600; }
-  .book { padding: .85rem 0; border-bottom: 1px solid var(--border); }
+  .read-head b { color: var(--text); font-weight: 600; }
+  .book { padding: .9rem 0; border-bottom: 1px solid var(--border-soft); }
   .book:last-child { border-bottom: none; }
   .book-top {
     display: flex; justify-content: space-between; align-items: baseline;
     gap: 1rem; margin-bottom: .4rem;
   }
-  .book-title { font-size: .95rem; color: var(--fg); font-weight: 500; }
+  .book-title { font-size: .95rem; color: var(--text); font-weight: 500; }
   .book-meta {
-    font-size: .75rem; color: var(--muted); font-family: var(--mono);
-    white-space: nowrap;
+    font-size: .74rem; color: var(--muted); font-family: var(--mono);
+    white-space: nowrap; font-variant-numeric: tabular-nums;
   }
-  .book-sub { font-size: .78rem; color: var(--muted); margin-bottom: .45rem; }
-  .track { height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; }
+  .book-sub { font-size: .78rem; color: var(--dim); margin-bottom: .5rem; }
+  .track { height: 4px; border-radius: 2px; background: var(--border); overflow: hidden; }
   .track > i {
-    display: block; height: 100%; border-radius: 3px;
-    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    display: block; height: 100%; border-radius: 2px;
+    background: var(--accent);
   }
-  .read-done { font-size: .82rem; color: var(--muted); margin-top: 1rem; }
+  .read-done { font-size: .82rem; color: var(--muted); margin-top: 1.1rem; }
   .read-done b { color: var(--accent2); font-weight: 600; }
   .read-foot {
-    margin: 1.2rem 0 0; padding-top: .9rem;
-    border-top: 1px solid var(--border);
-    font-size: .78rem; color: var(--muted);
+    margin: 1.3rem 0 0; padding-top: .9rem;
+    border-top: 1px solid var(--border-soft);
+    font-size: .76rem; color: var(--dim);
   }
   .read-loading { font-size: .88rem; color: var(--muted); }
 </style>
