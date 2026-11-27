@@ -7,16 +7,6 @@
 <meta name="description" content="个人导航页：知识库、每日一题、项目与工具入口。">
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
-  /* 标题书法体（Ma Shan Zheng, OFL）；只用于 h1 中文，拉丁走 Newsreader */
-  @font-face {
-    font-family: 'Title Brush';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/title-calligraphy.woff2') format('woff2');
-    unicode-range: U+2E80-2FDF, U+3000-303F, U+3400-4DBF, U+4E00-9FFF,
-      U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
-  }
   /* Claude / Anthropic palette: warm parchment, terracotta, warm-only neutrals */
   :root {
     --bg: #141413;          /* Deep Dark */
@@ -57,12 +47,12 @@
   }
   .wrap { max-width: 760px; margin: 0 auto; }
 
-  /* ---------- 头部：一行身份 + 书法名 ---------- */
+  /* ---------- 头部：一行身份 + 主标题 ---------- */
   header { margin-bottom: 2.6rem; }
   h1 {
-    font-family: 'Newsreader', 'Title Brush', var(--serif);
-    font-size: 2.6rem; font-weight: 400; margin: 0 0 .5rem;
-    letter-spacing: .01em; line-height: 1.15;
+    font-family: var(--serif);
+    font-size: 2.6rem; font-weight: 500; margin: 0 0 .5rem;
+    letter-spacing: -.01em; line-height: 1.15;
   }
   .tagline { color: var(--muted); font-size: .98rem; margin: 0; line-height: 1.6; }
 
