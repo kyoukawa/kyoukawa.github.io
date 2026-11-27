@@ -3,303 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>川 · 导航</title>
-<meta name="description" content="个人导航页：知识库、每日一题、项目与工具入口。">
-<link rel="stylesheet" href="assets/fonts.css">
+<title>知识库 · 川</title>
+<meta name="description" content="个人主页已并入知识库首页：kb.is-a.dev">
+<link rel="canonical" href="https://kb.is-a.dev/">
+<meta http-equiv="refresh" content="0; url=https://kb.is-a.dev/">
 <style>
-  /* Claude / Anthropic palette: warm parchment, terracotta, warm-only neutrals */
-  :root {
-    --bg: #141413;          /* Deep Dark */
-    --panel: #1c1b19;
-    --panel-2: #232221;
-    --border: #30302e;      /* Dark Surface */
-    --border-soft: #262624;
-    --text: #faf9f5;        /* Ivory */
-    --muted: #b0aea5;       /* Warm Silver */
-    --dim: #87867f;
-    --accent: #d97757;      /* Coral */
-    --accent2: #7fa889;     /* muted green */
-    --serif: 'Newsreader', "Songti SC", "STSong", "Noto Serif CJK SC",
-             "Source Han Serif SC", "Noto Serif SC", "SimSun", Georgia, serif;
-    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  :root{ color-scheme: light dark; }
+  body{
+    margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+    background:#FAF9F6;color:#1F1E1D;
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+      "Microsoft YaHei",sans-serif;
   }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f5f4ed;        /* Parchment */
-      --panel: #faf9f5;     /* Ivory */
-      --panel-2: #f0eee6;
-      --border: #e8e6dc;    /* Border Warm */
-      --border-soft: #f0eee6;
-      --text: #141413;      /* Near Black */
-      --muted: #5e5d59;     /* Olive Gray */
-      --dim: #87867f;
-      --accent: #c96442;    /* Terracotta */
-      --accent2: #4a7c59;
-    }
+  @media (prefers-color-scheme: dark){
+    body{background:#1A1917;color:#EDEBE6}
+    a{color:#E08A66 !important}
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 3rem 1.25rem 4rem;
-    background: var(--bg); color: var(--text);
-    font: 16.5px/1.68 -apple-system, BlinkMacSystemFont, "SF Pro Text",
-          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; }
-
-  /* ---------- 头部：一行身份 + 主标题 ---------- */
-  header { margin-bottom: 2.6rem; }
-  h1 {
-    font-family: var(--serif);
-    font-size: 2.6rem; font-weight: 500; margin: 0 0 .5rem;
-    letter-spacing: -.01em; line-height: 1.15;
-  }
-  .tagline { color: var(--muted); font-size: .98rem; margin: 0; line-height: 1.6; }
-
-  /* ---------- 店铺导航：两组主入口 ---------- */
-  h2 {
-    font-family: var(--serif);
-    font-size: 1.2rem; font-weight: 500; margin: 2.8rem 0 1rem;
-    color: var(--text); letter-spacing: -.01em;
-  }
-  h2::after {
-    content: ""; display: block; width: 2rem; height: 2px;
-    margin-top: .6rem; background: var(--accent); opacity: .6; border-radius: 2px;
-  }
-
-  /* 主入口：大块、带图标位、一眼能找到 */
-  .hero-grid {
-    display: grid; gap: .8rem;
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (max-width: 620px) { .hero-grid { grid-template-columns: 1fr; } }
-
-  .hero {
-    display: block; padding: 1.15rem 1.25rem; text-decoration: none;
-    color: inherit; background: var(--panel); border: 1px solid var(--border);
-    border-radius: 12px; transition: border-color .16s, transform .16s, background .16s;
-  }
-  .hero:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .hero .kicker {
-    font-family: var(--mono); font-size: .7rem; letter-spacing: .08em;
-    text-transform: uppercase; color: var(--accent); display: block;
-    margin-bottom: .35rem;
-  }
-  .hero .name {
-    font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
-    color: var(--text); display: block; margin-bottom: .25rem;
-  }
-  .hero .desc { font-size: .86rem; color: var(--muted); line-height: 1.55; display: block; }
-  .hero .host {
-    font-family: var(--mono); font-size: .72rem; color: var(--dim);
-    display: block; margin-top: .55rem;
-  }
-
-  /* 次级入口：紧凑清单 */
-  .linklist { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--panel); }
-  .linklist a {
-    display: flex; align-items: baseline; gap: .7rem;
-    padding: .8rem 1.1rem; text-decoration: none; color: inherit;
-    border-bottom: 1px solid var(--border-soft);
-    transition: background .14s;
-  }
-  .linklist a:last-child { border-bottom: 0; }
-  .linklist a:hover { background: var(--panel-2); }
-  .linklist .t { font-size: .95rem; color: var(--text); flex: 0 0 auto; font-weight: 500; }
-  .linklist .d { font-size: .82rem; color: var(--dim); flex: 1 1 auto; }
-  .linklist .ext { font-family: var(--mono); font-size: .72rem; color: var(--dim); flex: 0 0 auto; }
-
-  /* ---------- 读书：压缩成一行摘要 + 展开 ---------- */
-  .reading {
-    margin-top: 1rem; padding: 1rem 1.15rem; background: var(--panel);
-    border: 1px solid var(--border); border-radius: 12px; font-size: .9rem;
-  }
-  .reading .sum { color: var(--muted); }
-  .reading .sum b { color: var(--text); font-weight: 600; }
-  .reading details { margin-top: .55rem; }
-  .reading details + details { margin-top: .35rem; }
-  .reading summary {
-    cursor: pointer; color: var(--accent); font-size: .84rem; user-select: none;
-    list-style: none; padding: .15rem 0;
-  }
-  .reading summary::-webkit-details-marker { display: none; }
-  .reading summary::before { content: "› "; display: inline-block; transition: transform .15s; }
-  .reading details[open] > summary::before { transform: rotate(90deg); }
-  .reading details[open] > summary { margin-bottom: .35rem; }
-  .bk { display: flex; justify-content: space-between; gap: .8rem; padding: .45rem 0;
-        border-bottom: 1px solid var(--border-soft); font-size: .86rem; }
-  .bk:last-child { border-bottom: 0; }
-  .bk .n { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .bk .p { font-family: var(--mono); font-size: .78rem; color: var(--dim); flex: 0 0 auto; }
-
-  /* ---------- 页脚 ---------- */
-  footer {
-    margin-top: 4rem; padding-top: 1.4rem;
-    border-top: 1px solid var(--border-soft);
-    font-size: .8rem; color: var(--dim);
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: .6rem;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  footer a { color: var(--muted); }
-  footer a:hover { color: var(--accent); }
+  main{max-width:32rem;padding:2rem;text-align:left}
+  h1{font-family:Georgia,"Songti SC","Noto Serif CJK SC",serif;font-weight:500;
+     font-size:1.5rem;margin:0 0 .5rem}
+  p{color:#6B6862;margin:0 0 1rem}
+  @media (prefers-color-scheme: dark){ p{color:#A6A29A} }
+  a{color:#A94A28}
 </style>
 </head>
 <body>
-<div class="wrap">
-
-  <header>
-    <h1>川</h1>
-    <p class="tagline">高三 · 北京。把重复劳动交给机器。</p>
-  </header>
-
-  <h2>知识库</h2>
-  <div class="hero-grid">
-    <a class="hero" href="https://kb.is-a.dev/">
-      <span class="kicker">仪表盘</span>
-      <span class="name">看板</span>
-      <span class="desc">读书记录、每日题目、试卷数字化进度，一页看完</span>
-      <span class="host">kb.is-a.dev/dashboard</span>
-    </a>
-    <a class="hero" href="https://kb.is-a.dev/latest.html">
-      <span class="kicker">每日</span>
-      <span class="name">今天四道题</span>
-      <span class="desc">语文红楼梦 ×2 + 化学 ×2，先做后看答案</span>
-      <span class="host">kb.is-a.dev/latest</span>
-    </a>
-    <a class="hero" href="https://kb.is-a.dev/exam.html">
-      <span class="kicker">刷题</span>
-      <span class="name">试卷搜索</span>
-      <span class="desc">428 份原卷，按年 / 卷别 / 学科 / 区县筛选</span>
-      <span class="host">kb.is-a.dev/exam</span>
-    </a>
-    <a class="hero" href="https://kb.is-a.dev/view.html?file=chinese-index">
-      <span class="kicker">作文</span>
-      <span class="name">语文语料库</span>
-      <span class="desc">六维判据、四题七稿、范文拆解、时文素材</span>
-      <span class="host">kb.is-a.dev/chinese</span>
-    </a>
-  </div>
-
-  <h2>更多入口</h2>
-  <div class="linklist">
-    <a href="https://kb.is-a.dev/">
-      <span class="t">知识库首页</span>
-      <span class="d">全部索引，按用途找</span>
-      <span class="ext">kb.is-a.dev</span>
-    </a>
-    <a href="https://kb.is-a.dev/view.html?file=english-index">
-      <span class="t">英语语料库</span>
-      <span class="d">What→How→Effect→Value，阅表题写作</span>
-      <span class="ext">kb</span>
-    </a>
-    <a href="https://kb.is-a.dev/view.html?file=study-log">
-      <span class="t">学习日志</span>
-      <span class="d">短板雷达 + 带学错题</span>
-      <span class="ext">kb</span>
-    </a>
-    <a href="https://kb.is-a.dev/view.html?file=reading-progress">
-      <span class="t">微信读书</span>
-      <span class="d">在读 / 读完 / 时长，脚本自动同步</span>
-      <span class="ext">kb</span>
-    </a>
-    <a href="https://kb.is-a.dev/writing-ocr.html">
-      <span class="t">写作经纬线（二）</span>
-      <span class="d">124 篇全文，可搜索</span>
-      <span class="ext">kb</span>
-    </a>
-    <a href="https://node.tailedc20c.ts.net:8443/">
-      <span class="t">CloudCLI</span>
-      <span class="d">在手机/平板上开 Claude Code 会话</span>
-      <span class="ext">隧道直连</span>
-    </a>
-  </div>
-
-  <h2>正在读</h2>
-  <div class="reading" id="read-box">
-    <span class="sum">加载中…</span>
-  </div>
-
-  <h2>代码</h2>
-  <div class="linklist">
-    <a href="https://github.com/kyoukawa/agent-system">
-      <span class="t">agent-system</span>
-      <span class="d">多 Agent 路由：Router 分派，Worker 隔离执行</span>
-      <span class="ext">GitHub</span>
-    </a>
-    <a href="https://github.com/kyoukawa/reading-collector">
-      <span class="t">reading-collector</span>
-      <span class="d">链接 → 清洗 → Obsidian 笔记，本地转写零 key</span>
-      <span class="ext">GitHub</span>
-    </a>
-    <a href="https://github.com/kyoukawa/vault-backup">
-      <span class="t">vault-backup</span>
-      <span class="d">知识库本体，obsidian-git 自动同步</span>
-      <span class="ext">GitHub</span>
-    </a>
-  </div>
-
-  <footer>
-    <span>© 2026 川</span>
-    <span>
-      <a href="https://github.com/kyoukawa">GitHub</a> ·
-      <a href="https://kb.is-a.dev/">知识库</a>
-    </span>
-  </footer>
-
-</div>
-
+<main>
+  <h1>个人主页已并入知识库</h1>
+  <p>看板、每日一题、试卷搜索、在读与项目入口现在都在同一页。正在跳转…</p>
+  <p><a href="https://kb.is-a.dev/">前往 kb.is-a.dev</a></p>
+</main>
 <script>
-(function () {
-  // 读书数据：优先 kb.is-a.dev，失败回退 github.io
-  var DATA_URLS = [
-    'https://kb.is-a.dev/assets/weread.json',
-    'https://kyoukawa.github.io/vault-backup/assets/weread.json'
-  ];
-  var box = document.getElementById('read-box');
-
-  function esc(s) {
-    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
-    });
-  }
-  function dur(m) {
-    m = Math.max(0, Math.round(m || 0));
-    if (!m) return '0 分';
-    var h = Math.floor(m / 60), r = m % 60;
-    return h ? (h + ' 小时' + (r ? ' ' + r + ' 分' : '')) : (r + ' 分');
-  }
-  function fetchJSON(urls, i) {
-    i = i || 0;
-    if (i >= urls.length) return Promise.reject(new Error('数据源不可用'));
-    return fetch(urls[i] + '?v=' + Date.now())
-      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .catch(function () { return fetchJSON(urls, i + 1); });
-  }
-
-  fetchJSON(DATA_URLS).then(function (d) {
-    var c = d.counts || {}, t = d.time || {};
-    var books = (d.reading || []).slice(0, 4).map(function (b) {
-      var pct = Math.max(0, Math.min(100, b.progress || 0));
-      return '<div class="bk"><span class="n">' + esc(b.title) + '</span>'
-        + '<span class="p">' + pct + '%</span></div>';
-    }).join('');
-
-    box.innerHTML =
-      '<span class="sum">书架 <b>' + (d.shelf || 0) + '</b> 本 · 在读 <b>'
-      + (c.reading || 0) + '</b> · 读完 <b>' + (c.done || 0) + '</b> · 本周 <b>'
-      + dur(t.week) + '</b>（' + (t.weekDays || 0) + ' 天）</span>'
-      + (books ? '<details><summary>看具体书目</summary>' + books + '</details>' : '')
-      + '<details><summary>完整进度与变化日志</summary>'
-      + '<div class="bk"><span class="n"><a href="https://kb.is-a.dev/view.html?file=reading-progress">阅读进度</a></span>'
-      + '<span class="p">' + esc(d.updated || '') + '</span></div>'
-      + '<div class="bk"><span class="n"><a href="https://kb.is-a.dev/view.html?file=reading-log">阅读日志</a></span>'
-      + '<span class="p"></span></div></details>';
-  }).catch(function () {
-    box.innerHTML = '<span class="sum">读书数据没取到。'
-      + '<a href="https://kb.is-a.dev/view.html?file=reading-progress">直接打开阅读进度</a></span>';
-  });
-})();
+  // 保留 ?theme= 之类的查询串，避免深浅色偏好丢失
+  location.replace('https://kb.is-a.dev/' + location.search + location.hash);
 </script>
 </body>
 </html>
